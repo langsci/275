@@ -302,19 +302,19 @@ with argument selection information. Here is a simple illustration based on
 Upper case letters are used for the two dimensions of classification, and \emph{v-lx}, \emph{intr-lx}, \emph{s-rsg-lx}, and \emph{srv-lx} abbreviate \emph{verb-lexeme}, \emph{intransitive-lexeme}, \emph{subject-raising-lexeme}, and \emph{subject-raising-verb-lexeme}, respectively. All these types will be subject to specific constraints. For example, \emph{v-lx} will be subject to something like the following constraint:
 
 \ea\label{ex:key:4.3}
-    \emph{v-lx} → $\begin{bmatrix*}[l]
-                        $HEAD$ & \emph{verb} \\
-                        $SUBJ$ & $\tuple{XP}$ \\
-                    \end{bmatrix*}$
+    \emph{v-lx} → \avm[style=narrow]{
+                        [head & verb\\
+                         subj & < xp >]
+                    }
 \z
 %
 This says that a verb lexeme has a verbal part of speech and requires a phrase of some kind as its subject. Similarly, we will have something like the following constraint for \emph{s-rsg-lx}:
 
 \ea\label{ex:key:4.4}
-    \emph{s-rsg-lx} →   $\begin{bmatrix*}[l]
-                            $SUBJ$ & \tuple{[1]} \\
-                            $COMPS$ & $\tuple{SUBJ \tuple{[1]}}$ \\
-                        \end{bmatrix*}$
+    \emph{s-rsg-lx} →   \avm[style=narrow]{
+                           [ subj & < \1 >\\
+                             comps & < subj < \1 >> ]
+                        }
 \z
 %
 This says that a subject-raising-lexeme has a subject and a complement, and the
@@ -463,39 +463,15 @@ necessary was developed in some early \gls{HPSG}\is{Head-Driven Phrase Structure
 number of empty heads (an approach which was abandoned in \citealt{Sag1997}).
 One of these heads has the following description:
 
-\renewcommand{\arraystretch}{1.25}
 \ea\label{ex:key:4.8}
-    {\small
-    $\begin{bmatrix*}[l]
-        $LOCAL$ & \begin{bmatrix*}[l]
-                    $CAT$       &   \begin{bmatrix*}[l]
-                                        $HEAD$ & %
-                                            \begin{bmatrix*}[l]
-                                                $MOD N$'$[TO-BIND | REL \{[1]\}]:$%
-                                                \begin{bmatrix*}[l]
-                                                    $INDEX [1]$\\
-                                                    $RESTR [3]$
-                                                \end{bmatrix*}
-                                            \end{bmatrix*}\\
-                                        \multicolumn{2}{l}{%
-                                            $SUBCAT <[LOC[4], INHER | REL
-                                        \{[1]\}],$}\\
-                                        \multicolumn{2}{l}{%
-                                            $\hphantom{SUBCAT
-                                            <}S[\emph{fin},
-                                            \emph{unmarked}, INHER | SLASH
-                                            \{[4]\}]: [5]>$
-                                        }\\
-                                    \end{bmatrix*}\\
-                    \multicolumn{2}{l}{%
-                    $CONTENT$      \begin{bmatrix*}[l]
-                                        $INDEX [1]$\\
-                                        $RESTR \{[5]\}$\cup [3]\\
-                                    \end{bmatrix*}
-                    }\\
-                    \end{bmatrix*} \\
-        \multicolumn{2}{l}{$NONLOCAL | TO-BIND | SLASH $\{[4]\}}
-    \end{bmatrix*}$
+     \small
+     \avm[style=narrow]{
+       [
+        local & [ cat & [ head & [ mod n' [to-bind|rel \{ \1 \}]: [index & \1\\ restr & \3] ]\\
+                          subcat & < [loc \4, inher | rel \{\1\}],\\
+                                     s[ {\normalfont\itshape  fin, unmarked, } inher | slash \{\4\}]: \5 > ]\\
+                  content & [ index & \1 \\ restr & \{\5 $\cup$ \3\}] ]\\
+        \punk{nonlocal|to-bind|slash}{\{\4\}} ]
     }
 \z
 %
@@ -852,14 +828,11 @@ structure:
         \Tree
             [.\node(root){S};
                 [.\node[minimum size=2cm](V){V\\
-                    $\begin{bmatrix*}[l]
-                        $SUBJ \tuple{[1]}$\\
-                        $COMPS \tuple{[2]}$
-                    \end{bmatrix*}$};
+                    \avm{[ subj & <\1>\\ comps & <\2>]}};
                     is
                 ]
-                [.{[1]NP} Kim ]
-                [.{[2]NP} \edge[roof]; {a linguist} ]
+                [.{\avm{\1} NP} Kim ]
+                [.{\avm{\2} NP} \edge[roof]; {a linguist} ]
             ]
 
     \end{tikzpicture}
@@ -879,14 +852,11 @@ the following:
         \Tree
             [.\node(root){S};
                 [.\node(V){V\\
-                    $\begin{bmatrix*}[l]
-                        $SUBJ \tuple{}$\\
-                        $COMPS \tuple{[1], [2]}$
-                    \end{bmatrix*}$};
+                    \avm{[subj & < \1 >\\comps & < \2 >]}};
                     is
                 ]
-                [.{[1]NP} Kim ]
-                [.{[2]NP} \edge[roof]; {a linguist} ]
+                [.{\avm{\1} NP} Kim ]
+                [.{\avm{\2} NP} \edge[roof]; {a linguist} ]
             ]
 
     \end{tikzpicture}
@@ -924,9 +894,9 @@ in \ili{Archi}. On this analysis, \REF{ex:key:4.24} has the schematic analysis i
 
         \Tree
             [.\node(root){S};
-                [.{NP\\{}[CASE \Erg{}]} zari ]
-                [.{NP\\{}[CASE \Abs{}]} noˤš ]
-                [.{NP\\{}[CASE \Obl{}]} darcʹ-li-r-ši ]
+                [.{NP\\{}[\textsc{case} \Erg{}]} zari ]
+                [.{NP\\{}[\textsc{case} \Abs{}]} noˤš ]
+                [.{NP\\{}[\textsc{case} \Obl{}]} darcʹ-li-r-ši ]
                 [.{V} e‹b›tʹni ]
             ]
 
@@ -1037,11 +1007,12 @@ feature. Adopting it, one might propose that the \ili{Welsh} VSO sentence in
 \z
 
 \ea\label{ex:key:4.31}
-    $\begin{bmatrix*}[l]
-        \multicolumn{2}{l}{$SYNSEM S$}\\
-        $DTRS$ & $\tuple{[\emph{Emrys}], [\emph{gwelodd y ddraig]}]}$\\
-        $DOM$ & $\tuple{[\emph{gwelodd}], [\emph{Emrys]}, [\emph{y ddraig}]}$\\
-    \end{bmatrix*}$
+    \avm{
+      [synsem & S\\
+       dtrs & < \normalfont\itshape !{\ob}!Emrys!{\cb}!,~!{\ob}!gwelodd y ddraig!{\cb}!>\\
+       dom  & < \normalfont\itshape !{\ob}!gwelodd!{\cb}!,~!{\ob}!Emrys!{\cb}!,~!{\ob}!y ddraig!{\cb}!>
+      ]
+    }
 \z
 %
 On this analysis \ili{Welsh} has finite VPs just like \ili{English}. One could
@@ -1062,11 +1033,12 @@ might be used to provide an account of extraposed \isi{relative clauses}, such a
 \z
 
 \ea\label{ex:key:4.33}
-    $\begin{bmatrix*}[l]
-        \multicolumn{2}{l}{$SYNSEM S$}\\
-        $DTRS$ & $\tuple{[\emph{a man who looked like Chomsky}], [\emph{came in]}]}$\\
-        $DOM$ & $\tuple{[\emph{a man}], [\emph{came in]}, [\emph{who looked like Chomsky}]}$\\
-    \end{bmatrix*}$
+    \avm{
+      [synsem & S\\
+       dtrs & < \normalfont\itshape !{\ob}!a man who looked like Chomsky!{\cb}!,~!{\ob}!came in!{\cb}!>\\
+       dom  & < \normalfont\itshape !{\ob}!a man!{\cb}!,~!{\ob}!came in!{\cb}!,~!{\ob}!who looked like Chomsky!{\cb}!>
+      ]
+    }
 \z
 %
 Alternatively, however, one might assume that such examples are rather like
