@@ -934,21 +934,21 @@
             }
 %     \fi
     }{}
-    % Improve the appearance of numbers in tables and the TOC 
+    % Improve the appearance of numbers in tables and the TOC
     % In those places, they should come out monospaced, unlike in main text.
     \let\oldtabular\tabular	% number in tabulars
     \let\endoldtabular\endtabular
     \renewenvironment{tabular}{\normalfont\addfontfeatures{Numbers={Monospaced,Lining}}\selectfont\oldtabular}{\endoldtabular}
-    
+
     \DeclareTOCStyleEntry
-      [  
+      [
         entrynumberformat=\addfontfeature{Numbers={Monospaced,Lining}},
         pagenumberformat=\addfontfeature{Numbers={Monospaced,Lining}}\bfseries,
         raggedentrytext=true
       ]
       {tocline}
       {chapter}
-      
+
     \DeclareTOCStyleEntries
       [
         entrynumberformat=\addfontfeature{Numbers={Monospaced,Lining}},
@@ -957,7 +957,7 @@
       ]
       {tocline}
       {section,subsection,subsubsection,paragraph,subparagraph}
-    
+
     % In collected volumes, adjust the spacing for unnumbered chapters
 %     \iflsCollection
     \ifbool{collection}{
@@ -2116,7 +2116,7 @@ Storage and cataloguing done by \storageinstitution\\[3ex]
 %   \fi
   \titleToHead
 }
-  
+
 \newcommand{\lsCollectionPaperHeaderAuthor}{{%
   \renewcommand{\newlineCover}{}%
   \renewcommand{\newlineTOC}{}%
@@ -2261,7 +2261,7 @@ Storage and cataloguing done by \storageinstitution\\[3ex]
 \fi
 
 \ifx\lsBookLanguage\lsBookLanguageChinese
-    %%Fonts for Chinese typesetting. If booklanguage=chinese, then 
+    %%Fonts for Chinese typesetting. If booklanguage=chinese, then
     %%xeCJK is loaded, which provides the font commands below.
     \setCJKmainfont[
 %       Path=\fontpath,
@@ -2274,14 +2274,14 @@ Storage and cataloguing done by \storageinstitution\\[3ex]
       BoldFont = SourceHanSansSC-Bold.otf
       ]
       {SourceHanSansSC-Regular.otf}
-      
+
       %% Settings for Punctuation
       \xeCJKsetup{CheckFullRight=true}
       \xeCJKsetup{PunctStyle=CCT}
-	
+
       %% Localisation strings
-      \renewcommand{\sectionname}{节}  
-      \renewcommand{\figurename}{图}  
+      \renewcommand{\sectionname}{节}
+      \renewcommand{\figurename}{图}
       \renewcommand{\tablename}{表}
       \renewcommand{\contentsname}{目\hspace{1em}录}
       \renewcommand{\appendixname}{附录}

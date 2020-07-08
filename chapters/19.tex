@@ -146,9 +146,9 @@ of this hierarchy in \textcite{Baker2018}, comprising a slightly different
 set of heads is called the \enquote{VICTR Hierarchy}.}
 
 \ea
-    \begin{tikzpicture}[baseline]
+    \begin{tikzpicture}[baseline=(root.base)]
 
-        \Tree 	[.VolitionP
+        \Tree 	[.\node(root){VolitionP};
                     Volition
                     [.InitiationP
                         Initiation
@@ -463,8 +463,9 @@ Government--Binding terms. Under Burzio’s approach, the argument of unergative
 is an \emph{external argument} whereas the argument of unaccusatives is an
 \emph{internal argument}. In current minimalist terms, this is represented as
 follows, with the external argument first-merged in Spec,\emph{v}P and the
-internal argument in the complement position of VP:\largerpage[2]
+internal argument in the complement position of VP:
 
+\begin{multicols}{2}
 \ea
     \ea Unergatives\\
         \begin{tikzpicture}[baseline]
@@ -492,6 +493,7 @@ internal argument in the complement position of VP:\largerpage[2]
         \end{tikzpicture}
     \z
 \z
+\end{multicols}
 
 \noindent The \isi{Unaccusative Hypothesis} as formulated by Perlmutter and
 Burzio has both strengths and weaknesses. These will be the focus of the next
@@ -546,9 +548,9 @@ with transitive \emph{destroy} (> \emph{destroyer}) and intransitive
 position whether the predicate is transitive or intransitive:
 
 \ea Lucy melts the butter. / The butter melts.\\
-    \begin{tikzpicture}[baseline, scale=.8]
+    \begin{tikzpicture}[baseline=(root.base), scale=.8]
 
-        \Tree 	[.VolitionP
+        \Tree 	[.\node(root){VolitionP};
                     [.DP \edge[roof]; \node (fin) {(Lucy)}; ]
                     [.Volition$'$
                         Volition
@@ -648,7 +650,7 @@ languages – or where different purported diagnostics of unaccusativity
 work in this regard is \citet{Rosen1984}. Rosen shows, for example, that the
 verbs meaning \enquote{to sweat} show unaccusative\is{unaccusativity} properties in Choctaw
 (occurrence with accusative\is{accusative case} pronouns) but unergative\is{unergativity} properties in \ili{Italian}
-(occurrence with auxiliary\is{auxiliaries} HAVE):
+(occurrence with auxiliary\is{auxiliaries} HAVE):\newpage
 
 \ea Choctaw \parencite[62]{Rosen1984}\\
     \sn
@@ -939,9 +941,9 @@ the thematic domain – a fairly significant departure from traditional
 assumptions:
 
 \ea
-    \begin{tikzpicture}[baseline]
+    \begin{tikzpicture}[baseline=(root.base)]
 
-        \Tree 	[.\emph{init}P
+        \Tree 	[.\node(root){\emph{init}P};
                     \emph{init}
                     [.\emph{proc}P
                         \emph{proc}
@@ -1110,11 +1112,11 @@ problem which is by no means easy to solve. This problem is perhaps
 particularly apparent with intransitives denoting states. State verbs often
 show a great deal of language-internal variation and apparent lexical
 idiosyncrasy with regard to \isi{split intransitivity} diagnostics. In \ili{Dutch}, for
-example, some state verbs occur with HAVE and others with BE:\newpage
+example, some state verbs occur with HAVE and others with BE:
 
 \ea \ili{Dutch} \parencite[870]{Sorace2000}
     \ea
-        \gll    Het   beeldje \textbf{heft} op   de   tafel   gestaan.\\
+        \gll    Het   beeldje \textbf{heeft} op   de   tafel   gestaan.\\
                 the   picture   has   on   the   table   stood\\
         \glt    \enquote*{The picture stood on the table.}
     \ex
@@ -1128,6 +1130,7 @@ Similar observations can be made with regard to case marking of statives in
 \gls{UG}\is{Universal Grammar} does not provide much if any help in the
 classification of these verbs into one of the two purported groups.
 
+\largerpage[1]
 Given all this, how can the language learner (or the linguist) determine
 whether \ili{English} stative verbs are unergative\is{unergativity} or unaccusative? They have
 generally been assumed to belong to the latter class (see
@@ -1173,9 +1176,11 @@ alternation are available in \ili{English} with very almost the same class of ve
     class of verbs comprising \emph{redden}, \emph{blacken}, \emph{ripen} etc.\
     which allow causatives but not resultatives:
 
-\begin{exe}\exi{(i)}[]{The wood blackened.}\end{exe}
-\begin{exe}\exi{(ii)}[]{The fire blackened the wood.}\end{exe}
-\begin{exe}\exi{(iii)}[*]{The wood blackened black.}\end{exe}
+\begin{exe}
+    \exi{(i)}[]{The wood blackened.}
+    \exi{(ii)}[]{The fire blackened the wood.}
+    \exi{(iii)}[*]{The wood blackened black.}
+\end{exe}
 
 One explanation for this property is that the result state (\emph{red},
 \emph{black}, \emph{ripe} etc.) incorporates directly into the verbal element
@@ -1200,7 +1205,7 @@ One explanation for this property is that the result state (\emph{red},
 \z
 This correspondence occurs even with verbs which otherwise appear to be
 idiosyncratic exceptions to the non-availability of these
-constructions:\newpage
+constructions:
 
 \ea
     \ea[*]{Lucy died dead. [intended meaning: \enquote{Lucy became dead as a result of dying}]}
@@ -1354,20 +1359,19 @@ Change of location & +/– & +/– & – & + & +\\
     of the VISCO Hierarchy}\label{tab:key:19.3}
 \end{table}
 
-\largerpage[-2]
 This enables explanation of why split intransitive patterns show the patterns
 of variation they do, something which is not furnished by other theories. This
-is most easily illustrated with auxiliary\is{auxiliaries} selection, which is also the
-phenomenon best studied with relation to the SIH\@. The generalisation which
-can be made is that in languages with a HAVE/BE split amongst auxiliaries in
-the periphrastic perfect with intransitives, BE is associated with heads below
-a certain point when they bear a positively valued feature (e.g.\ with Oriented
-when it bears [$+$oriented], but not where it bears [$-$oriented]); HAVE is
-then associated with heads bearing a positively valued feature above that
-point. The cut-off point in question, however, varies between
+is most easily illustrated with auxiliary\is{auxiliaries} selection, which is
+also the phenomenon best studied with relation to the SIH\@. The generalisation
+which can be made is that in languages with a HAVE/BE split amongst auxiliaries
+in the periphrastic perfect with intransitives, BE is associated with heads
+below a certain point when they bear a positively valued feature (e.g.\ with
+Oriented when it bears [$+$oriented], but not where it bears [$-$oriented]);
+HAVE is then associated with heads bearing a positively valued feature above
+that point. The cut-off point in question, however, varies between
 languages.\footnote{This does not by itself account for all the patterns
-    captured by the \gls{SIH}; for further discussion of how this may be done on a
-    TFH approach see \citet{Baker2018}.}
+captured by the \gls{SIH}; for further discussion of how this may be done on a
+TFH approach see \citet{Baker2018}.}
 
 To briefly summarise this discussion, it has considered the problem of
 attempting to divide intransitives into just two groups, which is manifest in
@@ -1536,7 +1540,7 @@ no need to order the rules so that certain semantic features take precedence
 over others, which obviates the need to justify such a rule ordering, or for
 learners to acquire it. (Where two properties are predicated of an argument –
 say, [$+$initiation] and [$+$change] – that argument is simply merged in both
-corresponding positions, as discussed above.)\largerpage[1]
+corresponding positions, as discussed above.)
 
 The VISCO approach does not require us to posit seemingly arbitrary
 associations of semantic properties to external or internal argument positions:
@@ -1560,8 +1564,8 @@ higher than \textsc{θ-change} ones:
     \gll    {Hannibal destroyed} {the city}.\\
             \textsc{θ-initiation} \textsc{θ-change}\\
 \z
-This allows the learner to posit InitiationP as higher in the structure than
-ChangeP. See \citet{Baker2018} for in-depth discussion.
+This allows the learner to posit InitiationP as being higher in the structure
+than ChangeP. See \citet{Baker2018} for in-depth discussion.
 
 As to why the particular order of heads should have come about in the first
 place, I admit I do not have a full explanation. Such deep explanations for the
