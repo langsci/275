@@ -47,6 +47,7 @@
 %% glosses per chapter (using bib2gls)
 \usepackage[record,postdot,section]{glossaries-extra}
 \usepackage{glossary-inline}
+\usepackage{glossary-mcols}
 
 \GlsXtrRecordCounter{chapter}
 
@@ -71,21 +72,21 @@
 \makeatletter
 \newglossarystyle{langsci}
 {%
-\setglossarystyle{inline}% base this style on the list style
-    \renewcommand*{\glsinlineseparator}{,\space}%
-    \renewcommand*{\glossentry}[2]{%
-        \gls@inlinesep
-        \glsentryitem{##1}%
-        \glsinlinenameformat{##1}{%
-          \textbf{\glossentryname{##1}}% = \glossentrydesc{##1}%
-        }%
-        {%
-            \ifglshasdesc{##1}%
-            { =\glsinlinedescformat{\glossentrydesc{##1}}{\glossentrysymbol{##1}}{##2}}%
-            {\glsinlineemptydescformat{\glossentrysymbol{##1}}{##2}}%
-        }%
-        \def\gls@inlinesep{\glsinlineseparator}%
-    }%
+\setglossarystyle{mcoltreenoname}% base this style on the list style
+%     \renewcommand*{\glsinlineseparator}{,\space}%
+%     \renewcommand*{\glossentry}[2]{%
+%         \gls@inlinesep
+%         \glsentryitem{##1}%
+%         \glsinlinenameformat{##1}{%
+%           \textbf{\glossentryname{##1}}% = \glossentrydesc{##1}%
+%         }%
+%         {%
+%             \ifglshasdesc{##1}%
+%             { =\glsinlinedescformat{\glossentrydesc{##1}}{\glossentrysymbol{##1}}{##2}}%
+%             {\glsinlineemptydescformat{\glossentrysymbol{##1}}{##2}}%
+%         }%
+%         \def\gls@inlinesep{\glsinlineseparator}%
+%     }%
 }
 \makeatother
 

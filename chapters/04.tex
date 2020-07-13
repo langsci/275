@@ -173,7 +173,7 @@ movement processes that are a feature of all versions of transformational
 grammar. The relations that are attributed to \isi{movement} in transformational work
 are captured by constraints that require certain features to have the same
 value. For example, a \isi{raising} sentence is one with a verb which has the same
-value for the feature SUBJ(ECT) as its complement. As a constraint-based
+value for the feature \textsc{subj(ect)} as its complement. As a constraint-based
 approach, it assumes that grammars involve sets of constraints, and a
 linguistic expression is well-formed if and only if it conforms to all relevant
 constraints. There are no procedures modifying representations such as the
@@ -193,7 +193,7 @@ with tenuous links to the observable data. Phonologically empty elements are
 only assumed if there is compelling evidence for them.\footnote{There may be
     compelling evidence for some empty elements in some languages. Thus,
     \textcite[Sec.\ 8]{Borsley2009} argues that \ili{Welsh} has phonologically empty
-pronouns. For general discussion of empty elements, see \textcite[Ch.\
+pronouns. For general discussion of empty elements, see \textcite[Sec.\
 19.2]{Muller2016}.} Thus, the fact that some \ili{English} subordinate clauses
 contain a complementizer\is{complementizers} is not seen as evidence that there is a phonologically
 empty complementizer\is{complementizers} in subordinate clauses in which no complementizer\is{complementizers} is
@@ -227,7 +227,7 @@ is a system of types, features, and constraints.\footnote{The related but
         \emph{lexical-sign} has the subtypes \emph{lexeme} and \emph{word}.
         Thus, we have the following type hierarchy:
 
-\ea\label{ex-5:key:1}
+\ea\label{ex-5:borsley:1}
     \begin{tikzpicture}[baseline=(root.base)]
 
         \Tree 	[.\node(root){\emph{sign}};
@@ -247,18 +247,18 @@ broad, general facts, very idiosyncratic facts, and everything in between. I
 will say more about this below.
 
 There are many other kinds of type. For example, there are types that are the
-value of fairly traditional features like PERSON, NUMBER, GENDER, and CASE. A
+value of fairly traditional features like \textsc{person}, \textsc{number}, \textsc{gender}, and \textsc{case}. A
 simple treatment of person might have the types \emph{first},
 \emph{second}, and \emph{third}, and a simple treatment of number the types
 \emph{sing}(\emph{ular}) and \emph{plur}(\emph{al}).\footnote{
 \textrm{In practice a more complex system of values may well be appropriate.}}
 Unlike the types mentioned above, these are atomic types with no features.
 There are also types that provide the value of various less familiar features.
-For example, \gls{HPSG}\is{Head-Driven Phrase Structure Grammar} has a feature HEAD, whose value is a \emph{part-of-speech},
+For example, \gls{HPSG}\is{Head-Driven Phrase Structure Grammar} has a feature \textsc{head}, whose value is a \emph{part-of-speech},
 a type which indicates the part of speech of a sign and provides appropriate
 information, e.g. information about person, number, gender, and case in the
 case of nominal signs or finiteness in the case of verbal signs. Two other
-important features are SUBJ(ECT) and COMP(LEMENT)S, whose value is a list of
+important features are \textsc{subj(ect)} and \textsc{comp(lement)s}, whose value is a list of
 \emph{synsem} objects, combinations of syntactic and semantic information.
 The former, mentioned earlier, indicates what kind of subject a sign requires
 and the latter indicates what complements it takes. Obviously, there are plenty
@@ -270,19 +270,19 @@ sets of subtypes, one dealing with part-of-speech information and one dealing
 with argument selection information. Here is a simple illustration based on
 \citet[20]{GinSag2000}:
 
-\ea\label{ex:key:4.2}
+\ea\label{ex:borsley:4.2}
     \begin{tikzpicture}[baseline=(lex.base)]
 
         \tikzset{level 1/.style={sibling distance=50pt}}
 
         \Tree 	[.\node(lex){\emph{lexeme}};
-                    [.PART-OF-SPEECH
+                    [.\textsc{part-of-speech}
                         \node (v-lx) {\emph{v-lx}};
                         \dots{}
                         \dots{}
                         \dots{}
                     ]
-                    [.ARG-SELECTION
+                    [.\textsc{arg-selection}
                         [.\emph{intr-lx}
                             \node (s-rsg-lx) {\emph{s-rsg-lx}};
                             \dots{}
@@ -301,7 +301,7 @@ with argument selection information. Here is a simple illustration based on
 %
 Upper case letters are used for the two dimensions of classification, and \emph{v-lx}, \emph{intr-lx}, \emph{s-rsg-lx}, and \emph{srv-lx} abbreviate \emph{verb-lexeme}, \emph{intransitive-lexeme}, \emph{subject-raising-lexeme}, and \emph{subject-raising-verb-lexeme}, respectively. All these types will be subject to specific constraints. For example, \emph{v-lx} will be subject to something like the following constraint:
 
-\ea\label{ex:key:4.3}
+\ea\label{ex:borsley:4.3}
     \emph{v-lx} → \avm[style=narrow]{
                         [head & verb\\
                          subj & < xp >]
@@ -310,7 +310,7 @@ Upper case letters are used for the two dimensions of classification, and \emph{
 %
 This says that a verb lexeme has a verbal part of speech and requires a phrase of some kind as its subject. Similarly, we will have something like the following constraint for \emph{s-rsg-lx}:
 
-\ea\label{ex:key:4.4}
+\ea\label{ex:borsley:4.4}
     \emph{s-rsg-lx} →   \avm[style=narrow]{
                            [ subj & < \1 >\\
                              comps & < subj < \1 >> ]
@@ -337,11 +337,10 @@ central to the syntax of the language. It is widely assumed that type
 information and one dealing with clausality information. Here is a simple
 illustration:
 
-\ea\label{ex:key:4.5}
+\ea\label{ex:borsley:4.5}
     \begin{tikzpicture}[baseline=(root.base)]
-
         \Tree 	[.\node(root){\emph{phrase}};
-                    [.HEADEDNESS
+                    [.\textsc{headedness}
                         \dots{}
                         [.\emph{headed-phrase}
                             \dots{}
@@ -353,7 +352,7 @@ illustration:
                             ]
                         ]
                     ]
-                    [.CLAUSALITY
+                    [.\textsc{clausality}
                         [.\emph{clause}
                             \node(interr-cl){\emph{interr-cl}};
                             \dots{}
@@ -418,8 +417,7 @@ immediately containing clause as its scope. This is unlike the situation in
 languages with so-called partial \emph{wh}-movement. Consider, for example,
 the following \ili{German} example from \citet{McDaniel1989}.
 
-\ea\label{ex:key:4.6} German
-    \sn
+\ea\label{ex:borsley:4.6} German\\
     \gll    Was glaubt Hans [[ mit wem ] Jakob jetzt spricht ]?\\
             what believes Hans {} with whom {} Jakob now speaks {}\\
     \glt    \enquote*{What does Hans think Jacob is speaking to now?}
@@ -440,7 +438,7 @@ head-filler-phrases involve structures of the following form, where X is
 C(omplementizer) or one of the elements that replaces it in work stemming from
 \citet{Rizzi1997}, e.g. Force, Top(ic), Foc(us).
 
-\ea\label{ex:key:4.7}
+\ea\label{ex:borsley:4.7}
     \begin{tikzpicture}[baseline=(xp.base)]
 
         \Tree 	[.\node(xp){XP};
@@ -463,7 +461,7 @@ necessary was developed in some early \gls{HPSG}\is{Head-Driven Phrase Structure
 number of empty heads (an approach which was abandoned in \citealt{Sag1997}).
 One of these heads has the following description:
 
-\ea\label{ex:key:4.8}
+\ea\label{ex:borsley:4.8}
      \small
      \avm[style=narrow]{
        [
@@ -476,20 +474,20 @@ One of these heads has the following description:
 \z
 %
 This interacts with certain phrase types to give a structure like
-\REF{ex:key:4.7}. It is complex, but each component of it has a purpose. The MOD
+\REF{ex:borsley:4.7}. It is complex, but each component of it has a purpose. The \textsc{mod}
 feature indicates that the maximal projection of this element modifies an Nʹ.
-The SUBCAT feature indicates that it combines with a specifier containing a
+The \textsc{subcat} feature indicates that it combines with a specifier containing a
 relative pronoun and a complement which is a finite clause with no
-complementizer but a non-empty SLASH feature ensuring that it contains a
-gap.\footnote{The SUBCAT feature does work that is done by separate SUBJ and
-COMPS features in later work. SLASH does the work that is done in \gls{MGG} by
-Aʹ-movement. For arguments that the SLASH mechanism provides a better account
+complementizer but a non-empty \textsc{slash} feature ensuring that it contains a
+gap.\footnote{The \textsc{subcat} feature does work that is done by separate \textsc{subj} and
+\textsc{comps} features in later work. \textsc{slash} does the work that is done in \gls{MGG} by
+Aʹ-movement. For arguments that the \textsc{slash} mechanism provides a better account
 of the phenomena, see \citet{Borsley2012}.} This feature also ensures that the
-specifier has the properties in the value of SLASH. The CONTENT feature ensures
+specifier has the properties in the value of \textsc{slash}. The \textsc{content} feature ensures
 that the content of this element brings together the content of the modified Nʹ
 and the relative clause. Various principles of \gls{HPSG}\is{Head-Driven Phrase Structure Grammar} ensure that the
 combination of Nʹ and relative clause has the content of the empty
-head.\footnote{The TO-BIND features ensure that the REL and SLASH features do
+head.\footnote{The \textsc{to-bind} features ensure that the \textsc{rel} and \textsc{slash} features do
 not appear any higher in the tree than they should.} As noted above, this
 approach has been abandoned, but it gives some idea of what is involved in
 giving an explicit analysis of the kind of empty head that is central to the
@@ -524,18 +522,16 @@ analysis is a fairly direct reflection of the observable data, as it is in
 As we have noted, a typical \gls{HPSG}\is{Head-Driven Phrase Structure Grammar} analysis will have a number of other
 subtypes of \emph{head-filler-phrase}. Consider the following examples:
 
-\ea\label{ex:key:4.9}
+\ea\label{ex:borsley:4.9}
     the book [ which I am writing ]
-\z
-\ea\label{ex:key:4.10}
+\ex\label{ex:borsley:4.10}
     What an interesting book this is!
-\z
-\ea\label{ex:key:4.11}
+\ex\label{ex:borsley:4.11}
     The more I read, the more I understand.
 \z
 %
-The bracketed material in \REF{ex:key:4.9} is a \emph{wh}-relative,
-\REF{ex:key:4.10} is a \emph{wh}-exclamative, and \REF{ex:key:4.11} is what has
+The bracketed material in \REF{ex:borsley:4.9} is a \emph{wh}-relative,
+\REF{ex:borsley:4.10} is a \emph{wh}-exclamative, and \REF{ex:borsley:4.11} is what has
 often been called a comparative correlative, a construction whose component
 clauses have been called \emph{the}{}-clauses, e.g. in \citet{Borsley2011}. We
 have three types of head-filler phrases each with various distinctive
@@ -546,7 +542,7 @@ subject. Finally, \emph{the}{}-clauses must contain \emph{the} and a
 comparative word. The second clause but not the first may contain a pre-subject
 auxiliary:
 
-\ea\label{ex:key:4.12}
+\ea\label{ex:borsley:4.12}
     \ea[]{The more I read, the more do I understand.}
     \ex[*]{The more do I read, the more I understand.}
     \z
@@ -563,44 +559,39 @@ is compelling evidence for them. In the absence of clear evidence for such an
 element, this is just an ad hoc way of minimizing differences between
 constructions. It is not difficult to provide an analysis which does not involve
 an empty element. For \gls{HPSG}\is{Head-Driven Phrase Structure Grammar}, as
-indicated earlier, \isi{relative clauses} have a feature MOD, whose value
+indicated earlier, \isi{relative clauses} have a feature \textsc{mod}, whose value
 indicates what type of nominal phrase they modify. In a \emph{wh}-relative
-clause, the value of MOD is coindexed with the relative pronoun, as in
-\REF{ex:key:4.13}:
+clause, the value of \textsc{mod} is coindexed with the relative pronoun, as in
+\REF{ex:borsley:4.13}:
 
-\ea\label{ex:key:4.13}
-    \begin{tikzpicture}[baseline]
-
+\ea\label{ex:borsley:4.13}
+    \begin{tikzpicture}[baseline,yshift=.75\baselineskip]
         \tikzset{level distance=50pt}
-
-        \Tree 	[.\node(root){S\\{}[MOD N$ʹ_{i}$]};
+        \Tree 	[.\node(root){S\\{}[\textsc{mod} N$ʹ_{i}$]};
                     [.NP$i$ who ]
-                    [.\node(s){S\\{}[SLASH \{NP$_i$\}]};
+                    [.\node(s){S\\{}[\textsc{slash} \{NP$_i$\}]};
                         \edge [roof]; {I talked to}
                     ]
                 ]
-
     \end{tikzpicture}
 \z
 %
-The value of SLASH matches the filler and hence has the same index.\footnote{In
+The value of \textsc{slash} matches the filler and hence has the same index.\footnote{In
     a more complex example such as the following, where the relative pronoun is
-    just part of the filler, the value of SLASH and the relative pronoun will
+    just part of the filler, the value of \textsc{slash} and the relative pronoun will
     have different indices:
 
 \begin{exe}
     \exi{(i)} whose brother I talked to
-\end{exe}} In a non-\emph{wh}-relative clause, the value of MOD is coindexed
-directly with the value of SLASH, as in \REF{ex:key:4.14}:
+\end{exe}} In a non-\emph{wh}-relative clause, the value of \textsc{mod} is coindexed
+directly with the value of \textsc{slash}, as in \REF{ex:borsley:4.14}:
 
-\ea\label{ex:key:4.14}
-    \begin{tikzpicture}[baseline]
-
+\ea\label{ex:borsley:4.14}
+    \begin{tikzpicture}[baseline,yshift=.75\baselineskip]
         \tikzset{level distance=50pt}
-
-        \Tree 	[.\node(root){S\\{}[MOD N$ʹ_{i}$]};
+        \Tree 	[.\node(root){S\\{}[\textsc{mod} N$ʹ_{i}$]};
                     [.NP I ]
-                    [.\node(s){S\\{}[SLASH \{NP$_i$\}]};
+                    [.\node(s){S\\{}[\textsc{slash} \{NP$_i$\}]};
                         \edge [roof]; {talked to}
                     ]
                 ]
@@ -623,11 +614,11 @@ language-specific features.
 
 The types that are the value of various traditional features will differ from
 language to language for obvious reasons. Languages differ in how many genders
-and cases they have. Therefore, the features GENDER and CASE will differ in
+and cases they have. Therefore, the features \textsc{gender} and \textsc{case} will differ in
 what types they have as possible values. Languages may also differ in whether
 or not they have these features. Only some languages have grammatical gender
 and only some languages show morphological case\is{case!morphological case}. Of course, it is possible to
-assume an abstract notion of CASE present in languages whether or not they have
+assume an abstract notion of \textsc{case} present in languages whether or not they have
 morphological case, but this complicates the acquisition\is{language acquisition} task and necessitates
 more complex innate machinery than would otherwise be needed. It is probably
 not a position that would find favour outside MGG.\footnote{An abstract notion
@@ -635,35 +626,35 @@ of case (or Case) played an important role in the Government and Binding
 framework, but it seems to be of little importance within Minimalism and it has
 not been adopted outside \gls{MGG}.}
 
-A question that arises here is whether languages have the same GENDER and CASE
+A question that arises here is whether languages have the same \textsc{gender} and \textsc{case}
 feature if they have very different systems of values. Does a language with two
-genders have the same GENDER feature as one with ten? Probably most researchers
+genders have the same \textsc{gender} feature as one with ten? Probably most researchers
 would think that they do, but there is room for debate here. Of course,
 questions like this are not peculiar to \gls{HPSG}\is{Head-Driven Phrase Structure Grammar} but arise in any theoretical
 framework.
 
 Within \gls{HPSG}\is{Head-Driven Phrase Structure Grammar}, whether or not a language has case is first and foremost a
-question of whether the type \emph{noun} has CASE among its features. But there
-is another question here: does the type \emph{adj} have CASE among its
+question of whether the type \emph{noun} has \textsc{case} among its features. But there
+is another question here: does the type \emph{adj} have \textsc{case} among its
 features?  In some languages that have morphological case\is{case!morphological case} it is clearly a
 property of adjectives as well as nouns. Consider e.g. \ili{German} or Arabic.
 But in other languages with morphological case\is{case!morphological case}, it does not extend to
 adjectives. The North-East Caucasian language \ili{Archi} is a relevant example
 (see \citealt{BonBroChuCor2016} for discussion). Similar issues arise with
-gender. If a language has gender, then the type \emph{noun} has GENDER among
+gender. If a language has gender, then the type \emph{noun} has \textsc{gender} among
 its features, but it may or not be a feature of other types such as \emph{adj} or
 \emph{verb}.
 
-What about other features, e.g. the HEAD feature? This will probably have a
+What about other features, e.g. the \textsc{head} feature? This will probably have a
 large number of values (but not so many as it would have within Minimalism,
 where numerous \enquote{functional} parts of speech have been postulated, e.g.\
 Force, Top(ic)\is{topic}, and Foc(us)\is{focus} mentioned earlier). It is
 likely, however, that there will be some variation from language to language.
 Of course, just as there are questions about whether different languages can
-have the same GENDER and CASE features,\is{case!case features} so there are questions about whether
+have the same \textsc{gender} and \textsc{case} features,\is{case!case features} so there are questions about whether
 they can have the same \emph{noun}, \emph{verb} and \emph{adjective} types.
 \citet{Haspelmath2010} thinks not. However, most \gls{HPSG}\is{Head-Driven Phrase Structure Grammar} linguists seem to
-assume they can, and this view is defended in \textcite[Ch.\ 2.2]{Muller2015}.
+assume they can, and this view is defended in \textcite[Sec.\ 2.2]{Muller2015}.
 
 The questions that we have just highlighted arise in any theoretical framework.
 However, it is possible to sidestep them in a framework that does not emphasize
@@ -682,13 +673,13 @@ languages are a lexical matter.\largerpage[1]
 Most obviously, the same meaning will generally be associated with different
 phonological properties in different languages. \ili{English} has \emph{dog} where
 Welsh has \emph{ci} and \ili{Polish} has \emph{pies}. Clearly, however, there can be
-other differences. A meaning may be associated with different HEAD values in
+other differences. A meaning may be associated with different \textsc{head} values in
 different languages. Thus, for example, the \ili{Welsh} counterpart of the
 modal verb \emph{must} is the noun \emph{rhaid} \enquote{necessity}, as in
-\REF{ex:key:4.15}.
+\REF{ex:borsley:4.15}.
 
-\ea\label{ex:key:4.15}\ili{Welsh}
-    \sn\gll Rhaid i mi adael.\\
+\ea\label{ex:borsley:4.15}\ili{Welsh}\\
+    \gll Rhaid i mi adael.\\
             necessity to me leave.\Inf{}\\
     \glt    \enquote*{I must leave.}
 \z
@@ -729,7 +720,7 @@ structure as ordinary clauses in such languages, they will probably have a type
 \emph{wh-interrogative-clause} which is a subtype of
 \emph{head-subject-phrase}, giving the following situation:
 
-\ea\label{ex:key:4.16}
+\ea\label{ex:borsley:4.16}
 \begin{tikzpicture}[baseline=(hd.base), grow'=up]
 
         \Tree   [.\emph{wh-int-cl}
@@ -759,7 +750,7 @@ As also noted earlier, another subtype of \emph{head-filler-phrase} is required
 to accommodate the two clauses in comparative correlatives such as the
 following:
 
-\ea\label{ex:key:4.17}
+\ea\label{ex:borsley:4.17}
     The more I read, the more I understand.
 \z
 %
@@ -770,14 +761,12 @@ Other languages have broadly similar constructions.\footnote{This is noted by
 \textcite{AbeBor2008} for critical discussion.} Consider e.g.\ \ili{French} and
 Spanish:
 
-\ea\label{ex:key:4.18}\ili{French}\\
-    \sn\gll Plus je lis, plus je comprend.\\
+\ea\label{ex:borsley:4.18}\ili{French}\\
+    \gll Plus je lis, plus je comprend.\\
             more I read more I understand\\
     \glt    \enquote*{The more I read, the more I understand.}
-\z
-
-\ea\label{ex:key:4.19}\ili{Spanish}\\
-    \sn\gll Cuanto más leo, (tanto) más entiendo.\\
+\ex \label{ex:borsley:4.19}\ili{Spanish}\\
+    \gll Cuanto más leo, (tanto) más entiendo.\\
             how.much more I.read that.much more I.understand\\
     \glt    \enquote*{The more I read, the more I understand.}
 \z
@@ -791,8 +780,8 @@ different constraints. In some languages, the second clause need not be a
 head-filler-phrase. One such language is \ili{Dutch}, with examples like the
 following:
 
-\ea\label{ex:key:4.20}Dutch\
-    \sn\gll Des te meer je leest, je begrijpt des te minder.\\
+\ea\label{ex:borsley:4.20}Dutch\\
+    \gll Des te meer je leest, je begrijpt des te minder.\\
             the.\Gen{} \textsc{te} more you read you understand the.\Gen{} \textsc{te} less\\
     \glt    \enquote*{The more you read the more you understand.}
 \z
@@ -807,9 +796,9 @@ addition to those mentioned, there is a \emph{head-adjunct-phrase} type
 required for adjective and nominal combinations such as \emph{old} \emph{men}
 and verb-phrase and adverb combinations such as \emph{walk} \emph{slowly}. It
 may be that another subtype is necessary for verb-initial\is{verb-initial constituent order} clauses such as
-\REF{ex:key:4.21}.
+\REF{ex:borsley:4.21}.
 
-\ea\label{ex:key:4.21}
+\ea\label{ex:borsley:4.21}
     Is Kim a linguist?
 \z
 %
@@ -820,7 +809,7 @@ binary branching restriction have never been very persuasive, see e.g.\
 subject and the complement are sisters of the verb, as in the following
 structure:
 
-\ea\label{ex:key:4.22}
+\ea\label{ex:borsley:4.22}
     \begin{tikzpicture}[baseline=(root.base)]
 
         \tikzset{frontier/.style={distance from root=100pt}}
@@ -844,7 +833,7 @@ constraint. But there is an alternative approach to verb-initial\is{verb-initial
 which the verb takes two complements and no subject, giving a structure like
 the following:
 
-\ea\label{ex:key:4.23}
+\ea\label{ex:borsley:4.23}
     \begin{tikzpicture}[baseline=(root.base)]
 
         \tikzset{frontier/.style={distance from root=100pt}}
@@ -877,17 +866,17 @@ relevant not just to clauses in which verb and complement(s) are separated by
 the subject but also to clauses in which they are adjacent. That is, there may
 be SVO or SOV clauses in which there is a flat structure and no VP. Thus,
 \citet{Borsley2016} argues that such an analysis is appropriate for SOV clauses
-in \ili{Archi}. On this analysis, \REF{ex:key:4.24} has the schematic analysis in
-\REF{ex:key:4.25}.
+in \ili{Archi}. On this analysis, \REF{ex:borsley:4.24} has the schematic analysis in
+\REF{ex:borsley:4.25}.
 
-\ea\label{ex:key:4.24}Archi\\
+\ea\label{ex:borsley:4.24}Archi\\
     \sn
     \gll zari noˤš darcʹ-li-r-ši e‹b›tʹni.\\
             \Fsg.\Erg{} horse.\Iii{}[\Sg.\Abs{}] post-\Obl.\Sg{}-\Cont-\All{} ‹\Iii.\Sg›.tie.\Pfv{}\\
     \glt    \enquote*{I tied the horse to the post.}
 \z
 
-\ea\label{ex:key:4.25}
+\ea\label{ex:borsley:4.25}
     \begin{tikzpicture}[baseline=(root.base)]
 
         \tikzset{frontier/.style={distance from root=80pt}}
@@ -913,8 +902,8 @@ For \gls{HPSG}\is{Head-Driven Phrase Structure Grammar}, \ili{English} subject-i
 \emph{head-subject-phrase} type. \ili{Arabic} also has subject-initial clauses,
 e.g. the following:
 
-\ea\label{ex:key:4.26}\ili{Arabic}
-    \sn\gll T-tullaab-u qaabaluu {/ } \llap{*}qaabala Aħmad-a.\\
+\ea\label{ex:borsley:4.26}\ili{Arabic}\\
+    \gll T-tullaab-u qaabaluu {/} \llap{*}qaabala Aħmad-a.\\
             the-students-\Nom{} met.\Tpl.\M{} {} met.\Tsg.\M{} Ahmad-\Acc{}\\
     \glt    \enquote*{The students met Ahmad.}
 \z
@@ -926,8 +915,8 @@ subject-initial clause shows full agreement for person, gender, and
 number.\is{agreement!subject agreement}\is{agreement!number agreement} The
 situation is different in verb-initial\is{verb-initial constituent order} clauses, as the following shows:
 
-\ea\label{ex:key:4.27}\ili{Arabic}
-    \sn\gll qaabala {/ } \llap{*}qaabaluu T-tullaab-u Aħmad-a.\\
+\ea\label{ex:borsley:4.27}\ili{Arabic}\\
+    \gll qaabala {/ } \llap{*}qaabaluu T-tullaab-u Aħmad-a.\\
             met.\Tsg.\M{} {} met.\Tpl.\M{} the-students-\Nom{} Ahmad-\Acc{}\\
     \glt    \enquote*{The students met Ahmad.}
 \z
@@ -937,8 +926,8 @@ number. This might be seen as evidence against the idea that subject-initial
 clauses are clauses with an initial \isi{topic}. Consider, however, an example with
 an initial \isi{topic} interpreted as subject of a subordinate clause:
 
-\ea\label{ex:key:4.28}\ili{Arabic}
-    \sn\gll T-tullaab-u ʔiqtaraħtu {[} ʔan yušaarikuu {/ } \llap{*}yušaarika fii l-musaabaqat-i ].\\
+\ea\label{ex:borsley:4.28}\ili{Arabic}\\
+    \gll T-tullaab-u ʔiqtaraħtu {[} ʔan yušaarikuu {/ } \llap{*}yušaarika fii l-musaabaqat-i ].\\
             the-students-\Nom{} suggested.\Fsg.\M{} {} that participate.\Tpl.\M{} {} participate.\Tsg.\M{} in the-competition-\Gen{}\\
     \glt    \enquote*{The students I suggested participate in the competition.}
 \z
@@ -951,17 +940,17 @@ topic. Null subject sentences,\is{null subjects} which I assume have a null pron
 show full agreement.\is{agreement!subject agreement} Thus, the following can only have the meaning indicated
 and cannot mean that they met Ahmad:
 
-\ea\label{ex:key:4.29}\ili{Arabic}
-    \sn\gll laqad    qaabala    Aħmad-a.\\
+\ea\label{ex:borsley:4.29}\ili{Arabic}\\
+       \gll laqad    qaabala    Aħmad-a.\\
             indeed met.\Tsg.\M{} Ahmad-\Acc{}\\
     \glt    \enquote*{He met Ahmad.}
 \z
 %
-Essentially the same analysis can be applied to \REF{ex:key:4.26}. That is, it
+Essentially the same analysis can be applied to \REF{ex:borsley:4.26}. That is, it
 too can be analysed as involving an initial \isi{topic} coindexed with a null
-pronominal subject. If this is right, \REF{ex:key:4.26} is not a
-head-subject-phrase but a head-filler-phrase.\footnote{ \textrm{This argument
-is taken from \citet{AloBor2013}.}} Maybe \ili{Arabic} has some other kinds of
+pronominal subject. If this is right, \REF{ex:borsley:4.26} is not a
+head-subject-phrase but a head-filler-phrase.\footnote{This argument
+is taken from \citet{AloBor2013}.} Maybe \ili{Arabic} has some other kinds of
 head-subject-phrase or maybe it has no head-subject-phrases at all.
 
 We should now say something about word order. For \gls{HPSG}\is{Head-Driven Phrase Structure Grammar}, as for some other
@@ -988,25 +977,25 @@ earlier \gls{GPSG} framework.}
 
 The fact just highlighted means that SVO and SOV languages may have VPs
 licensed by the same \emph{head-complement-phrase} type. VSO languages are
-different if they have either of the analyses in \REF{ex:key:4.22} and
-\REF{ex:key:4.23}. (On the analysis in \REF{ex:key:4.23} the clause is a
+different if they have either of the analyses in \REF{ex:borsley:4.22} and
+\REF{ex:borsley:4.23}. (On the analysis in \REF{ex:borsley:4.23} the clause is a
 head-complement-phrase but it is not an ordinary VP.) However, there is an
 alternative approach which might be taken to VSO clauses. Much work in
 \gls{HPSG} has proposed that linear order is a reflection not of the
 constituent structure of an expression but of a separate system of order
 domains \parencite[see][]{Reape1992,Muller1996,Kathol2000}.  Within this
 approach, the constituent structure of an expression is encoded as the value of
-a DTRS (DAUGHTERS) feature and the order domain as the value of a DOM(AIN)
+a \textsc{dtrs (daughters)} feature and the order domain as the value of a \textsc{dom(ain)}
 feature. Adopting it, one might propose that the \ili{Welsh} VSO sentence in
-\REF{ex:key:4.30} has the schematic analysis in \REF{ex:key:4.31}.
+\REF{ex:borsley:4.30} has the schematic analysis in \REF{ex:borsley:4.31}.
 
-\ea\label{ex:key:4.30}\ili{Welsh}
-    \sn\gll Gwelodd      Emrys  y    ddraig.\\
+\ea\label{ex:borsley:4.30}\ili{Welsh}\\
+    \gll Gwelodd      Emrys  y    ddraig.\\
             see.\Pst.\Tsg{} Emrys the dragon\\
     \glt    \enquote*{Emrys saw the dragon.}
 \z
 
-\ea\label{ex:key:4.31}
+\ea\label{ex:borsley:4.31}
     \avm{
       [synsem & S\\
        dtrs & < \normalfont\itshape !{\ob}!Emrys!{\cb}!,~!{\ob}!gwelodd y ddraig!{\cb}!>\\
@@ -1019,20 +1008,18 @@ On this analysis \ili{Welsh} has finite VPs just like \ili{English}. One could
 propose essentially the same analysis for verb-initial\is{verb-initial constituent order} clauses in a language in
 which the existence of finite VPs is uncontroversial, e.g.\ \ili{English}. In
 \citet{Borsley2006}, I argue against an analysis of this kind for \ili{Welsh}
-and in favour of an analysis of the kind in \REF{ex:key:4.23}. It could be,
-however, that the approach in \REF{ex:key:4.31} is appropriate for other VSO
+and in favour of an analysis of the kind in \REF{ex:borsley:4.23}. It could be,
+however, that the approach in \REF{ex:borsley:4.31} is appropriate for other VSO
 languages or for verb-initial\is{verb-initial constituent order} clauses in some language of other types.
 
 Even if order domains are not appropriate for \ili{Welsh} VSO clauses, they
 provide a plausible approach to various other phenomena. For example, they
 might be used to provide an account of extraposed \isi{relative clauses}, such as
-\REF{ex:key:4.32}, which might have the analysis in \REF{ex:key:4.33}.
+\REF{ex:borsley:4.32}, which might have the analysis in \REF{ex:borsley:4.33}.
 
-\ea\label{ex:key:4.32}
+\ea\label{ex:borsley:4.32}
     A man came in who looked like Chomsky.
-\z
-
-\ea\label{ex:key:4.33}
+\ex \label{ex:borsley:4.33}
     \avm{
       [synsem & S\\
        dtrs & < \normalfont\itshape !{\ob}!a man who looked like Chomsky!{\cb}!,~!{\ob}!came in!{\cb}!>\\
@@ -1172,14 +1159,13 @@ Like many languages, Modern Standard Arabic\il{Modern Standard
 Arabic|see{Arabic}} has simple comparatives with a comparative form of an
 adjective and complex comparatives with two separate elements:
 
-\newpage
 
-\ea\label{ex:key:4.34}\ili{Arabic}
-    \ea\label{ex:key:4.34a}
+\ea\label{ex:borsley:4.34}\ili{Arabic}
+    \ea\label{ex:borsley:4.34a}
         \gll    heya    ʔaTwal-u           min    xalid-in\\
                 she taller.\F.\Sg.\Nom{} from Khalid-\Gen{}\\
         \glt    \enquote*{She is taller than Khalid.}
-    \ex\label{ex:key:4.34b}
+    \ex\label{ex:borsley:4.34b}
         \gll    ʔanaa        ʔakthar-u    thakaʔ-an          min    ali-in\\
                 \Fsg.\M{} more-\Nom{} intelligence-\Acc{} from Ali-\Gen{}\\
         \glt    \enquote*{I am more intelligent than Ali.}
@@ -1188,7 +1174,7 @@ adjective and complex comparatives with two separate elements:
 %
 Superficially, these examples are much like their \ili{English} translations
 and like simple and complex comparatives in many other languages. However, as
-the gloss of \REF{ex:key:4.34b} makes clear, \emph{thakaʔ-an} is not an
+the gloss of \REF{ex:borsley:4.34b} makes clear, \emph{thakaʔ-an} is not an
 adjective like \emph{intelligent}, but what can be called an adjectival noun
 (with accusative\is{accusative case} case). This might seem like a minor, unimportant difference.
 However, there is evidence that it is an important matter, reflecting the fact
@@ -1197,20 +1183,20 @@ the complex comparatives of many other languages. The most important evidence
 comes from the fact that the construction can contain not just adjectival nouns
 but also ordinary nouns:
 
-\ea\label{ex:key:4.35}\ili{Arabic}
-    \sn\gll ʔanaa        ʔakthar-u    maal-an      min    ali-in\\
+\ea\label{ex:borsley:4.35}\ili{Arabic}\\
+    \gll ʔanaa        ʔakthar-u    maal-an      min    ali-in\\
             \Fsg.\M{} more-\Nom{} money.\Acc{} from Ali-\Gen{}\\
     \glt    \enquote*{I have more money than Ali.}
 \z
 %
-It is fairly clear that \REF{ex:key:4.34b} involves the same comparative
-construction as \REF{ex:key:4.35}. To reflect this, it could be translated as
+It is fairly clear that \REF{ex:borsley:4.34b} involves the same comparative
+construction as \REF{ex:borsley:4.35}. To reflect this, it could be translated as
 \enquote{I have more intelligence than Ali}. The comparative construction in
-\REF{ex:key:4.34b} and \REF{ex:key:4.35} is quite like what is called the
-adjectival construct construction, illustrated in \REF{ex:key:4.36}.
+\REF{ex:borsley:4.34b} and \REF{ex:borsley:4.35} is quite like what is called the
+adjectival construct construction, illustrated in \REF{ex:borsley:4.36}.
 
-\ea\label{ex:key:4.36}\ili{Arabic}
-    \sn\gll ’anta    azīm-u        l-hazz-I\\
+\ea\label{ex:borsley:4.36}\ili{Arabic}\\
+    \gll ’anta    azīm-u        l-hazz-I\\
             you    great-\Nom{}    the-fortune-\Gen{}\\
     \glt    \enquote*{You have great luck.}, \enquote*{You are very lucky.}
 \z
@@ -1219,7 +1205,7 @@ The nominal in the adjectival construct is genitive\is{genitive case} and defini
 in the comparative construction is accusative\is{accusative case} and indefinite. However, in both
 cases, we have an adjective with an extra nominal complement, and in both, we
 have what can be called a possessive interpretation. Thus, the construction in
-\REF{ex:key:4.34b} is very different from its counterpart in \ili{English} and
+\REF{ex:borsley:4.34b} is very different from its counterpart in \ili{English} and
 other languages.\footnote{See \citet{AlsArnBor2017} for detailed discussion of
 the facts.}
 
