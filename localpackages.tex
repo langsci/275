@@ -36,12 +36,12 @@
 \usepackage{relsize}
 
 %% trees for Gereon
-\usepackage{pstricks}
-\usepackage{ps-trees}
+%\usepackage{pstricks}
+%\usepackage{ps-trees}
 
 %% glosses per chapter (using bib2gls)
-\usepackage[record,postdot,section]{glossaries-extra}
-\usepackage{glossary-inline}
+\usepackage[record,nopostdot,section]{glossaries-extra}
+%\usepackage{glossary-inline}
 \usepackage{glossary-mcols}
 
 \GlsXtrRecordCounter{chapter}
@@ -50,10 +50,10 @@
   src = {styles/glosses}, % entries in glosses.bib
 ]
 
-\newcommand{\printchapterglossary}[2][]{%
+\newcommand{\printchapterglossary}[1][]{%
     \printunsrtglossary*[nonumberlist,title={Abbreviations},#1]{%
     \renewcommand{\printunsrtglossaryhandler}[1]{%
-     \glsxtrfieldxifinlist{##1}{record.chapter}{\thechapter}
+     \glsxtrfieldxifinlist{##1}{record.chapter}{\thechapter}%
      {\glsxtrunsrtdo{##1}}%
      {}%
     }%
@@ -65,26 +65,23 @@
 \glstocfalse % don't add to TOC
 
 \makeatletter
-\newglossarystyle{langsci}
-{%
-\setglossarystyle{mcoltreenoname}% base this style on the list style
-%     \renewcommand*{\glsinlineseparator}{,\space}%
-%     \renewcommand*{\glossentry}[2]{%
-%         \gls@inlinesep
-%         \glsentryitem{##1}%
-%         \glsinlinenameformat{##1}{%
-%           \textbf{\glossentryname{##1}}% = \glossentrydesc{##1}%
-%         }%
-%         {%
-%             \ifglshasdesc{##1}%
-%             { =\glsinlinedescformat{\glossentrydesc{##1}}{\glossentrysymbol{##1}}{##2}}%
-%             {\glsinlineemptydescformat{\glossentrysymbol{##1}}{##2}}%
-%         }%
-%         \def\gls@inlinesep{\glsinlineseparator}%
-%     }%
+\newglossarystyle{langsci}{%
+    \setglossarystyle{mcolalttree} % mcolalttree introduces empty first line
+    % remove empty line
+    % from https://tex.stackexchange.com/questions/385883/delete-empty-line-in-glossaries
+    \renewenvironment{theglossary}%
+    {%
+        \begin{multicols}{2}%
+            \def\@gls@prevlevel{-1}%
+%           \mbox{}\par
+        }%
+        {\par\end{multicols}}%
 }
 \makeatother
 
+\setglossarypreamble{\vspace*{-\baselineskip}} % remove empty line
+\glssetwidest{\hspace{1.3cm}} % set width
+\renewcommand*{\glsnamefont}[1]{\normalfont{#1}} % remove boldface
 \setglossarystyle{langsci}
 
 % Use pubstate
@@ -112,7 +109,7 @@
 }
 
 % Julio
-% % \usepackage{paralist}
+%\usepackage{paralist}
 \usepackage{multirow}
 \usepackage{pifont}
 
