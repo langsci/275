@@ -888,7 +888,7 @@
 %     \iflsNewtxmath\else
     \notbool{newtxmath}{
     \setmathfont[AutoFakeBold
-%     ,Path=\fontpath
+    ,Path=./fonts/
     ]{LibertinusMath-Regular.otf}
     \setmathfont[range={cal},StylisticSet=1%,Path=\fontpath
     ]{XITSMath-Regular.otf}
@@ -904,7 +904,7 @@
     }{}
     \setmainfont[
     Ligatures={TeX,Common},
-%     Path=\fontpath,
+    Path=./fonts/,
     PunctuationSpace=0,
     Numbers={Proportional},
     BoldFont = LibertinusSerif-Semibold.otf,
