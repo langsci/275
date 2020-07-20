@@ -21,6 +21,12 @@
 
 \usepackage[autostyle=true]{csquotes}
 
+\makeatletter
+\let\pgfmathModX=\pgfmathMod@
+\usepackage{pgfplots}%
+\let\pgfmathMod@=\pgfmathModX
+\makeatother
+
 \usepackage{enumitem}
 \usetikzlibrary{matrix}
 
