@@ -404,13 +404,12 @@ of \isi{adverbs} in Late Middle and Early Modern English\label{fig:key:09.1}}
 % %     \includegraphics[width=\textwidth]{./img/09-fig1-2.pdf}
 \begin{tikzpicture}
   \begin{axis}[
-        enlarge y limits={abs=1cm,upper},
         colormap/RdYlBu,
         cycle list name = langsci,
-        height = .3\textheight,
+        height = .45\textheight,
         legend cell align=left,
         legend columns=3,
-        legend style={font=\footnotesize,anchor=north,at={(0.5,1.33)},anchor=north},
+        legend style={font=\footnotesize,anchor=north,at={(0.5,1.2)},anchor=north},
         sharp plot,
         width  = \textwidth,
         xlabel = {Date},
@@ -420,7 +419,7 @@ of \isi{adverbs} in Late Middle and Early Modern English\label{fig:key:09.1}}
         xtick = {1400,1450,1500,1550,1600},
         ylabel={\%},
         ymin=0,
-        ymax=15,
+        ymax=25,
     ]
     \foreach \i in {1,...,\numberofcols} {
                 \addplot+ table [x index={1},y index={\i},x expr=\thisrow{Date}] {\table};
