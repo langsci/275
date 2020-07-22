@@ -22,9 +22,10 @@
 
 \makeatletter
 \let\pgfmathModX=\pgfmathMod@
-\usepackage{pgfplots}%
+\usepackage{pgfplots,pgfplotstable}%
 \let\pgfmathMod@=\pgfmathModX
 \makeatother
+\usepgfplotslibrary{colorbrewer}
 
 \usepackage{enumitem}
 \usetikzlibrary{matrix}
