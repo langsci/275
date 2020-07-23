@@ -398,8 +398,39 @@ distinguished in the tables (e.g.\ 1448 for the period 1420--1475).
 \begin{figure}
 \caption{Frequency of pre-verbal/pre-auxiliary/pre-copula placement
 of \isi{adverbs} in Late Middle and Early Modern English\label{fig:key:09.1}}
-    \includegraphics[width=\textwidth]{./img/09-fig1-2.pdf}
+\pgfplotstableread{data/HaeberliIhsane.csv}{\table}
+\pgfplotstablegetcolsof{\table}
+\pgfmathtruncatemacro\numberofcols{\pgfplotsretval-1}
+% %     \includegraphics[width=\textwidth]{./img/09-fig1-2.pdf}
+\begin{tikzpicture}
+  \begin{axis}[
+        colormap/RdYlBu,
+        cycle list name = langsci,
+        height = .45\textheight,
+        legend cell align=left,
+        legend columns=3,
+        legend style={font=\footnotesize,anchor=north,at={(0.5,1.2)},anchor=north},
+        sharp plot,
+        width  = \textwidth,
+        xlabel = {Date},
+        x tick label style={/pgf/number format/1000 sep=},
+        xmin = 1380,
+        xmax = 1650,
+        xtick = {1400,1450,1500,1550,1600},
+        ylabel={\%},
+        ymin=0,
+        ymax=25,
+    ]
+    \foreach \i in {1,...,\numberofcols} {
+                \addplot+ table [x index={1},y index={\i},x expr=\thisrow{Date}] {\table};
+                \pgfplotstablegetcolumnnamebyindex{\i}\of{\table}\to{\colname} % Adding column headers to legend
+                \addlegendentryexpanded{\colname}
+            }
+  \end{axis}
+\end{tikzpicture}
 \end{figure}
+
+            
 
 One might wonder whether these low-frequency data, where potentially relevant
 differences occasionally lack statistical significance, allow us to draw any
