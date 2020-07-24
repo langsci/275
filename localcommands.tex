@@ -52,10 +52,9 @@
 }
 
 % boxes for Travis
-
 \newcommand{\custombox}[1]
   {%
-    \bgroup\fboxsep.33ex\fbox{#1}\egroup%
+    \strut\tikz[baseline=(node.base)] \node[draw,inner ysep=0pt] (node) {\strut #1};
   }
 
 % Fuß & Trips
