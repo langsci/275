@@ -924,7 +924,7 @@ have~\Cref{tree1}, where AspP is the complement of the aspectual structure of
 with the finite verb raised to Fin \citealt{adger:07}).
 
 \begin{figure}
-\caption{\color{red}Please provide caption\label{tree1}}
+\caption{Structure of example \eqref{leum}.\label{tree1}}
 \begin{tikzpicture}[baseline=(root.base), scale=.9]
     \Tree     [.\node(root){FinP};
                 {leum}
@@ -964,17 +964,17 @@ with the finite verb raised to Fin \citealt{adger:07}).
 %\end{forest}
 
 Agreement appears on Asp as a reflex of the \isi{movement} operation affecting the
-subject.\todo{Add reference to Figure in this sentence?}
+subject, as in~\Cref{tree1}.
 
 In the situation where the verbal root is compatible with a process, Asp takes
 the verbal root directly (or a VP built from it), and introduces the subject via the aspectual head
 \emph{ag/a'}, which signifies that the interpretation involves a process, as we
-saw above:
+saw above; see~\Cref{ag-tree}:
 
 \ea \ili{Scottish Gaelic}
 \ea\gll Bha mi a' suidhe\\
 be.\Pst{} I \Simp{} sit.\Vn{}\\
-\glt \enquote*{I sat/was sitting.}
+\glt \enquote*{I sat/was sitting.}\label{adger:56a}
 \ex \gll Bha mi nam shuidhe\\
 be.\Pst{} I in.\Poss.\Fsg{} sit.\Vn{}\\
 \glt \enquote*{I was sitting/seated.}
@@ -982,7 +982,7 @@ be.\Pst{} I in.\Poss.\Fsg{} sit.\Vn{}\\
 \z
 
 \begin{figure}
-\caption{\color{red}Please provide a caption and reference in the text\label{ag-tree}}
+\caption{Structure of example \eqref{adger:56a}.\label{ag-tree}}
 \begin{tikzpicture}[baseline=(root.base)]
 
     \Tree     [.\node(root){FinP};
@@ -1029,16 +1029,16 @@ across various syntactic elements (see also \citealt{Borer2005}).
 
 Following this general framework, simple state verbs, like `mean', `see', `believe', etc., also generate their
 subject in the specifier of AspP, rather than as a subject of St, much like
-process verbs:
+process verbs, so~\eqref{adger:57} has the structure in~\Cref{ag-tree2}:
 
-\ea \ili{Scottish Gaelic}\\
+\ea \ili{Scottish Gaelic}\label{adger:57}\\
 \gll Tha mi a' faicinn a' chait\\
 be.\Prs{} I \Simp{} see.\Vn{} the.\Gen{} cat.\Gen{}\\
 \glt \enquote*{I see the cat.}
 \z
 
 \begin{figure}
-\caption{\color{red}Please provide a caption and reference the figure in the main text.\label{ag-tree2}}
+    \caption{Structure of example~\eqref{adger:57}.\label{ag-tree2}}
 \begin{tikzpicture}[baseline=(root.base)]
 
     \Tree 	[.\node(root){FinP};
@@ -1097,7 +1097,7 @@ be.\Pst{} I in.\Poss.\Fsg{} sit.\Vn{}\\
 \z
 
 \begin{figure}
-\caption{\color{red}Please provide a caption\label{suidhetree}}
+\caption{Structure of example~\eqref{suidhe}.\label{suidhetree}}
 \begin{tikzpicture}[baseline=(root.base)]
 
     \Tree 	[.\node(rote){FinP};
@@ -1164,7 +1164,7 @@ arguments:
     \Tree 	[.\node(root){TP};
                 Calum
                 [.T$'$
-                    s
+                    is
                     [.NP
                         \tuple{Calum}
                         [.N$'$ {N\\student}
@@ -1181,7 +1181,7 @@ arguments:
 
 Since there is no event variable here, Calum cannot be the syntactic subject of a nominal predicate. This is the reason why simple nominal \isi{predication} is impossible in Gaelic:
 
-\ea \ili{Scottish Gaelic}\\
+\ea \ili{Scottish Gaelic}\label{adger:61}\\
     \gll * Tha  Calum  oileanach.\\
          {} Be.\Prs{}  Calum student \\
     \glt \hspaceThis{*} \enquote*{Calum is a student.}
@@ -1191,7 +1191,7 @@ The solution that Gaelic adopts is to allow St to combine with the root nominal
 first, as shown in \Cref{fig:adger:GaelicSt} and \REF{adger:ex:62}.
 
 \begin{figure}
-\caption{\color{red}Please provide a caption.\label{fig:adger:GaelicSt}}
+\caption{Structure of example~\eqref{adger:ex:62}.\label{fig:adger:GaelicSt}}
 \begin{tikzpicture}[baseline=(root.base)]
 
     \Tree 	[.\node(root){FinP};
@@ -1225,8 +1225,8 @@ first, as shown in \Cref{fig:adger:GaelicSt} and \REF{adger:ex:62}.
 
 \ea \ili{Scottish Gaelic}\label{adger:ex:62}\\
  \gll  Tha Calum na oileanach\\
-be.\Prs{} Calum in.\Poss.\Tsg.\M{} sit.\Vn{}\\
-\glt \enquote*{I was sitting/seated.}
+be.\Prs{} Calum in.\Poss.\Tsg.\M{} student\\
+\glt \enquote*{Calum is a student.}
 \z
 Here the root \emph{oileanach}, `student', is a property. Usually it will
 combine with a categorizer like n (or just N in \citeauthor{adgerbook}
@@ -1236,7 +1236,7 @@ associates it with an individual level variable:
 \ea \sem{N} = $\lambda$P$\lambda$x.holds(P, x) \z
 However, St combines with this property, associating it with a variable which
 ranges over temporally bounded states (cf. Carlsonian Stages
-\citep{carlson:77}). I will represent such variables as s:
+\citealt{carlson:77}). I will represent such variables as s:
 
 \ea \sem{St} = $\lambda$P$\lambda$s.holds(P, s) \z
 Temporally bounded intervals, even if they are temporally bounded intervals of
@@ -1514,8 +1514,8 @@ interpreted as asserting that the set of properties denoted by the NP is
 included in this. This is similar to the copula\is{copulas}, but involves the situational
 variable usually connected to PP \isi{predication}.
 
-However, this seems inconsistent with an observation discussed in
-section~\eqref{pred-inv}. There I showed that structures of the following sort
+However, this seems inconsistent with an observation discussed
+in~\Cref{pred-inv}. There I showed that structures of the following sort
 cannot be used to make a nominal predication:
 
 \ea \ili{Scottish Gaelic}\\
@@ -1617,17 +1617,18 @@ Relativizing over this structure, we create a predicate of properties:
 \ea a th' pro {ann an} Calum = $\lambda \wp$.$\wp \in \lambda$P.P(Calum) \z
 The function Qual cannot not apply, since pro is A-bar bound.
 
-Putting this outcome together with the analysis I motivated for copular\is{copulas}
-clauses, we derive the following structure for the cleft-strategy\is{clefts}.
+Putting this outcome together with the analysis I motivated for
+copular\is{copulas} clauses, we derive the structure in~\Cref{fig:adger:90} for
+the cleft-strategy\is{clefts}.
 
-\ea \ili{Scottish Gaelic}
+\ea \ili{Scottish Gaelic}\label{adger:90}
 \sn \gll  'S e oileanach a th' {ann an} Calum\\
 \Cop{} it student \Rel{} be.\Prs{} in Calum\\
 \glt \enquote*{Calum is a student.}
 \z
 
 \begin{figure}
-\caption{\color{red}Please provide a caption and reference the figure in your main text.}
+\caption{Structure of example~\eqref{adger:90}.\label{fig:adger:90}}
 \begin{tikzpicture}[baseline=(root.base)]
     \Tree 	[.\node(root){TP};
                 [.TP
