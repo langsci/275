@@ -1461,7 +1461,12 @@ Storage and cataloguing done by \storageinstitution\\[3ex]
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \usepackage{datetime}
-\usepackage{scrlayer-scrpage}
+\usepackage[autoenlargeheadfoot=off]{scrlayer-scrpage}
+% This option explicitely increases the size of the footer in plain pages.
+% This ensures there is enough space to print the citation in collected vols.
+% This setting does not influence the composition of the typearea.
+\AddToLayerPageStyleOptions{plain.scrheadings}
+    {onselect={\setlength{\footheight}{3\baselineskip}}}
 \ohead{\headmark}
 \ihead{}
 \cfoot{}
@@ -2132,9 +2137,8 @@ Storage and cataloguing done by \storageinstitution\\[3ex]
         \renewcommand{\author}[1]{\renewcommand{\@author}{##1}}
         \renewcommand*{\thesection}{\arabic{section}}
         \RedeclareSectionCommand
-            [afterskip=1.15\baselineskip plus .1\baselineskip minus .167\baselineskip,
-            beforeskip=0pt
-        ]{chapter}
+            [afterskip=1.15\baselineskip plus .1\baselineskip minus .167\baselineskip]
+            {chapter}
         \renewcommand{\maketitle}{
             % With \setchapterpreamble from scrbook, we ensure that the author(s),
             % their affiliation, the abstract, etc., are part of the \chapter block.
