@@ -1528,7 +1528,7 @@ Storage and cataloguing done by \storageinstitution\\[3ex]
 \usepackage{epigraph}
 \setlength{\epigraphrule}{0pt}
 \renewcommand{\textflush}{flushepinormal}
-%\setlength{\epigraphwidth}{.2\textwidth}
+\setlength{\epigraphwidth}{.618\textwidth}
 \setlength{\afterepigraphskip}{0\baselineskip}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -2146,10 +2146,6 @@ Storage and cataloguing done by \storageinstitution\\[3ex]
                 \onlyAuthor
                 \lsCollectionPaperAuthor%
                 \vspace{\baselineskip}
-                \ifx\@epigram\empty%
-                \else {\epigraph{\@epigram\\[-5ex]}{\@epigramsource}%
-                    \epigram{}\epigramsource{}}%
-                \fi%
                 \begin{quote}
                 \small\lsCollectionPaperAbstract
                 \end{quote}
@@ -2167,6 +2163,11 @@ Storage and cataloguing done by \storageinstitution\\[3ex]
             % controls page break penalties and indentation following the heading.
             \@afterindentfalse
             \@afterheading
+            \ifx\@epigram\empty%
+                \else {\epigraph{\@epigram\\[-5ex]}{\@epigramsource}
+                    \epigram{}\epigramsource{}}
+            \fi
+            \enlargethispage{-1\baselineskip}
         }
         \ohead{}
         \lehead{\lsCollectionPaperHeaderAuthor}
