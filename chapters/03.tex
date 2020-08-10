@@ -25,10 +25,10 @@ shows how macrovariation does not equal macroparametric\is{parameters} variation
 In a Minimalist approach to syntactic variation, the variation is often assumed
 to be located in the lexicon, since the items in the lexicon need to be learned
 anyway, be they of a lexical or functional nature. This basis of parametric
-variation is captured in the \isi{Borer--Chomsky Conjecture}
+variation is captured in the \isi{Borer--Chomsky conjecture}
 (\citealt[3]{Baker2008}, cf.\ \citealt{Borer1984,Chomsky1995}), building on the
-Lexical Parameterization Hypothesis (\citealt{ManziniWexler1987}) and the
-Functional Parameterization Hypothesis \citep{Fukui1995}:
+lexical parameterization hypothesis (\citealt{ManziniWexler1987}) and the
+functional parameterization hypothesis \citep{Fukui1995}:
 
 \ea All \isi{parameters} of variation are attributable to differences in the features
 of particular items (e.g. the functional heads\is{functional items}) in the lexicon.
@@ -105,9 +105,8 @@ setting.
 
 \begin{exe}
     \ex\label{bkm:Ref347566517}\label{ex:vdwal:3.5}%
-    \begin{tikzpicture}[baseline]
-
-        \Tree 	[.{F present?}
+    \begin{tikzpicture}[baseline=(F.base)]
+        \Tree 	[.\node(F){F present?};
                     {\textsc{no}}
                     [.\node(y){\textsc{yes}:};
                         {\textsc{yes}}
@@ -117,7 +116,6 @@ setting.
 
         \node [right=3mm of y.center] {all heads?};
         \node [right=3mm of n.center] {which subset of heads?};
-
     \end{tikzpicture}
 \end{exe}
 
@@ -273,7 +271,7 @@ particle \emph{á} (\ref{ex:vdwal:3.7}b).
 Final particles form another example: while complementisers\is{complementizers} typically precede
 the clause they embed, question particles in \ili{Zulu} and \ili{Rangi} are clearly
 clause-final, evidencing a high interrogative-related projection (cf.\
-\citealt{Buell2005,Buell2011}).
+\citealt{Buell2005,Buell2011}).\largerpage[-2]
 
 \ea\label{ex:vdwal:3.8}\ili{Zulu} (S42, \citealt[69]{Buell2005})
 	\ea
@@ -284,7 +282,7 @@ clause-final, evidencing a high interrogative-related projection (cf.\
 	\gll	 U-Sipho  u-ya-yi-thanda  lo-mculo  na?\\
             \Aug-1.Sipho  1\Sm-\Dj-9\Om{}-love  3.\Dem{}-3.song  \glossQ{}\\
 	\glt    ‘Does Sipho like this song?’
-    \z
+    \z\pagebreak
 \ex \ili{Rangi} (F33, \citealt[51]{Gibson2012})
     \ea
 	\gll	 Ma-saare  y-áányu  mwi-ter-iwre  ʉʉ?\\
@@ -320,13 +318,13 @@ derivational suffixes, ordered as in the simplified template in
     \ili{Chimwiini} is prefixal in general, with the exception of the past tense,
     which is a suffix.  Whether this exception is due to a syntactic
 nano-parameter or a different morphological specification remains a question
-for further research.}
+for further research.}\largerpage[-2]
 
-\begin{figure}
+\begin{figure}[H]
     \begin{tikzpicture}
     \matrix [
               matrix of nodes,
-              every node/.style={draw, font=\strut, minimum height=2.5\baselineskip},
+              every node/.style={draw, font=\strut, minimum height=2.6\baselineskip},
             ]
       {
         \Neg{} & subject & \Neg{} & \gls{TAM} & object & \textbf{root} &
@@ -338,10 +336,10 @@ for further research.}
 \end{figure}
 
 This verbal morphology provides clear clues as to its underlying syntax. The
-most attractive structural analysis of this verbal structure, following
+most attractive structural analysis of this verbal structure is, following
 \citet{Myers1990}, \citet{Julien2002}, \citet{Kinyalolo2003},
 \citet{Carstens2005} and \citet{Buell2005}, and drawing on the explanation in
-\Textcite{vanderWal2009}, is that the verb starts out as a root and incorporates
+\textcite{vanderWal2009}, that the verb starts out as a root and incorporates
 the derivational and inflectional \emph{suf}fixes by \isi{head movement} in the
 lower part of the clause.  It then terminates in a position lower than T. The
 inflectional \emph{pre}fixes on the verb represent functional heads\is{functional items} spelled out
@@ -358,8 +356,8 @@ combined head moves on to ApplP, incorporating a further suffix to its left:
 \emph{-oon-ih-er-iy-} and this complex moves once more to add the final suffix,
 which has been posited in an aspectual projection just above vP. Crucially,
 these are all suffixes, and they surface in reversed order of structural
-hierarchy (\citeauthor{Baker1988}'s \citeyear{Baker1988} \isi{Mirror
-Principle}).
+hierarchy (\citeauthor{Baker1988}'s \citeyear{Baker1988} \isi{mirror
+principle}).
 
 \ea\label{ex:vdwal:3.10} \ili{Makhuwa} (P31, \citealt[168--169]{vanderWal2009})\\
     \gll  nlópwáná  o-h-oón-íh-er-íy-á  epuluútsá\\
@@ -368,9 +366,9 @@ Principle}).
 \z
 
 \ea\label{ex:vdwal:3.11}
-    \begin{tikzpicture}[baseline]
+    \begin{tikzpicture}[baseline=(T.base)]
 
-        \Tree 	[.TP
+        \Tree 	[.\node(T){TP};
                     o-h-
                     [.AspP
                         {[[[[[-oon]\tss{i}ih]\tss{j}er]\tss{k}iy]\tss{m}a]}
@@ -417,7 +415,7 @@ to T: the inflectional morphemes appear in the reverse order of the \ili{Makhuwa
 inflectional prefixes \eqref{ex:vdwal:3.12}, and they appear as suffixes on the verb
 in \eqref{ex:vdwal:3.13}.
 
-\ea\label{ex:vdwal:3.12} \il{Makhuwa}Makhuwa (P31, \Citealt[169]{vanderWal2009})\\
+\ea\label{ex:vdwal:3.12} \il{Makhuwa}Makhuwa (P31, \citealt[169]{vanderWal2009})\\
     \gll kha-mw-aa-tsúwéla\\
         \Neg{}-\Spl.\Sm{}-\Ipfv{}-know\\
     \glt ‘you didn't know’
@@ -462,7 +460,7 @@ making this a \enquote{symmetrical} language.\footnote{One should, however, be c
     in characterising a whole language as one type, since it has become more
     and more evident that languages are usually only partly symmetrical
     (\citealt{Schadeberg1995,Rugemalira1991,Thwala2006,Ngonyani1996,NgonyaniGithinji2006,Riedel2009,Baker1988,AlsinaMchombo1993,Simango1995,ZellerNgoboka2006,Jerro2015};
-\Citealt{vanderWal2017}, etc.).}
+\citealt{vanderWal2017}, etc.).}
 
 \ea\label{ex:vdwal:3.14}Zulu (S42, \citealt[11]{Adams2010})
 	\ea
@@ -493,7 +491,7 @@ ungrammatical.
 \z
 
 Following \textcite{HaddicanHolmberg2012,HaddicanHolmberg2015}, I propose in
-\Textcite{vanderWal2017} that symmetry in \ili{Bantu} languages derives from the
+\textcite{vanderWal2017} that symmetry in \ili{Bantu} languages derives from the
 ability of lower functional heads\is{functional items} like the Applicative to (Case)\is{case!Case
 licensing} license an
 argument either in its complement or in its specifier, as in \eqref{ex:vdwal:3.16}
@@ -548,7 +546,7 @@ In asymmetrical languages, Appl always licenses the theme and \eqref{ex:vdwal:3.
 is the only possible derivation, whereas in symmetrical languages Appl is
 flexible in licensing either argument (and either derivation in \eqref{ex:vdwal:3.16}
 and \eqref{ex:vdwal:3.17} is possible). The features involved in flexible licensing
-are discussed in \Textcite{vanderWal2017}, but for the current discussion it
+are discussed in \textcite{vanderWal2017}, but for the current discussion it
 suffices to take this licensing flexibility to account for the difference
 between asymmetrical and symmetrical languages.
 
@@ -588,7 +586,7 @@ the lower phase\is{phases}, i.e.\ a microparameter, and within that subset we ca
 distinguish even further microparameterisation, for example only applicative
 but not causative in \ili{Otjiherero}. Moreover, there appears to be an
 implicational relation\is{implicational relations} as to which types of ditransitives\is{ditransitive
-constructions} show symmetrical object behaviour (\Citealt{vanderWal2017}),
+constructions} show symmetrical object behaviour \citep{vanderWal2017},
 shown in~\Cref{tab:vdwal:1}.
 
 \begin{table}
@@ -683,17 +681,17 @@ a non-locative class, as shown in
     locative and spells out as the locative prefix. The reanalysis to a PP then
     concerns the loss of null locative nouns, leaving the KP/PP. Regardless of
     the precise analysis of locatives (locatives as a nominal derivation by
-    means of nP being another possibility – see \Citealt{FuchsvanderWal2019}),
+    means of nP being another possibility – see \citealt{FuchsvanderWal2019}),
 the process of change from DP to PP and the relics in this area illustrate a
 nanoparametric setting.} The DP status can be seen in the locative’s ability to
 control subject agreement\is{agreement!subject agreement} and object
 agreement\is{agreement!object agreement} on the verb. However, not all
 languages retain locatives as a part of the noun class system, as there is
 variation in the categorial status of locatives. In some southern \ili{Bantu}
-languages locative DPs have undergone the \enquote{Great Locative Shift}
+languages locative DPs have undergone the \enquote{great locative shift}
 \citep{Marten2010}, reanalysing the locative prefix as a preposition. Locatives
 are thus PPs in these languages, as illustrated for \ili{Zulu} in
-\eqref{ex:vdwal:3.23}.
+\eqref{ex:vdwal:3.23}.\largerpage
 
 \ea\label{ex:vdwal:3.22} \ili{Chichewa} (N31,~\citealt[58]{Bresnan1991}; Ron Simango, p.c.)
 	\ea
@@ -776,7 +774,7 @@ with a matching interpretable feature (iF), the Goal. I assume that subject
 marking on the verb indicates the presence of a full uφ feature\is{φ-features} specification
 on T, and that \isi{object marking} is due to uφ on little v. I take a hybrid
 approach to \isi{object marking} as \isi{Agree} with a \isi{defective goal}
-(\citealt{Roberts2010,Iorio2014}; \Citealt{vanderWal2015}), which
+\citep{Roberts2010,Iorio2014,vanderWal2015}, which
 entails that all \isi{object marking}, be it pronominal (non-doubling) or grammatical
 (doubling), involves a φ probe. The presence of uφ features\is{φ-features} on a higher head
 like C results in agreeing complementisers\is{complementizers} or separate relative markers on the
@@ -805,9 +803,9 @@ appear as suffixes).
     \glt    ‘Mother has given him it.’
     \z
 \ex\label{ex:vdwal:3.26}\label{bkm:Ref347511825}
-    \begin{tikzpicture}[baseline=-.79\baselineskip]
+    \begin{tikzpicture}[baseline=(top.base)]
 
-        \Tree 	[.{vP}
+        \Tree 	[.\node(top){vP};
                     \node (v) {v\\{}[uφ]};
                     [.ApplP
                         \node (ben) {\textbf{\gls{BEN}}};
@@ -830,7 +828,7 @@ appear as suffixes).
 \subsection{First attempt at a hierarchy}\label{sub:3.3.2}
 
 In setting the uφ \isi{parameters} of a language, what needs to be established is
-whether the language makes use of uφ probes at all, and if so, on which heads
+wheth\-er the language makes use of uφ probes at all, and if so, on which heads
 these features are present. One can thus imagine a parameter hierarchy\is{parameter hierarchies} as in
 \eqref{ex:vdwal:3.27}, following the now-familiar none--all--some
 sequence.
@@ -909,8 +907,7 @@ subject marking are illustrated in \eqref{ex:vdwal:3.28}; and \eqref{ex:vdwal:3.
 separate subject marking on the verb and relative \isi{agreement} on the
 auxiliary\is{auxiliaries}.
 
-\ea\label{ex:vdwal:3.28} \ili{Ciluba} Kasai (L31, \citealt[87]{Cocchi2000})\label{bkm:Ref345186241}
-    \sn
+\ea\label{ex:vdwal:3.28} \ili{Ciluba} Kasai (L31, \citealt[87]{Cocchi2000})\label{bkm:Ref345186241}\\
     \gll Mukaji  \textbf{u}{}-\textbf{tshi}{}-\textbf{mu}{}-sumb-il-a.\\
           1.woman  1\Sm-7\Om-1\Om{}-buy-\Appl{}{}-\Fv{}\\
     \glt      `The woman buys it (fruit) for him (the boy).’
@@ -934,7 +931,7 @@ licensing\is{case!Case licensing},
 this would come down to heads that have
 Case in a featural specification.\footnote{However, see the discussion on Case in \sectref{bkm:Ref347925115}
     as well as \citet{Diercks2012} and
-    \Textcite{vanderWal2015}. Even if abstract \is{case!abstract Case} as we know it does
+    \textcite{vanderWal2015}. Even if abstract \is{case!abstract Case} as we know it does
 not play a role which is as influential in many European languages, there is
 still reason to believe that a nominal licensing constraint is at play
 universally, as we show in \textcite{SheevanderWal2016,SheevanderWal2018}.} In
@@ -949,8 +946,9 @@ would have already been done setting its \isi{parameters} at the previous
 question, i.e.\ all clausal heads have uφ.
 
 \ea\label{ex:vdwal:3.30}Kinyarwanda (JD61, \citealt[183]{BeauNurRos2004})\label{bkm:Ref317954425}\\
-    \gll Umugoré  \textbf{a}{}-ra-na-ha-\textbf{ki}{}-\textbf{zi}{}-\textbf{ba}{}-\textbf{ku}{}-\textbf{n-}someesheesherereza.\\
-    1.woman \First\Sm{}{}-\Dj{}-also-16\Om-7\Om{}-10\Om{}-2\Om-\Ssg.\Om-\Fsg.\Om-read.\Caus{}.\Caus{}.\Appl{}.\Appl{}\\
+    \begin{tabularx}{\linewidth}{@{}lQ@{}} Umugoré & \textbf{a}{}-ra-na-ha-\textbf{ki}{}-\textbf{zi}{}-\textbf{ba}{}-\textbf{ku}{}-\textbf{n-}someesheesherereza.\\
+    1.woman & \First\Sm{}{}-\Dj{}-also-16\Om-7\Om{}-10\Om{}-2\Om-\Ssg.\Om-\Fsg.\Om-read.\Caus{}.\Caus{}.\Appl{}.\Appl{}\\
+    \end{tabularx}\\
     \glt    ‘The woman is also making us read it (book, cl.\ 7) with them (glasses,
         cl.\ 10) to you for me there (at the house, cl.\ 16).’
 \ex \label{ex:vdwal:3.31}Kinyarwanda (JD61, \citealt[11]{ZellerNgoboka2014})\label{bkm:Ref345185298}
@@ -971,7 +969,7 @@ next question is whether uφ is present on heads in the higher phase\is{phases} 
 T but not Appl). If the setting is \enquote{yes}, the language has subject marking and
 only a single object marker, as illustrated for \ili{Makhuwa}. \ili{Makhuwa} shows
 extremely regular subject marking as well as \isi{object marking} (all and only
-objects in classes 1 and 2 are marked, \Citealt{vanderWal2009}), but is
+objects in classes 1 and 2 are marked, \citealt{vanderWal2009}), but is
 restricted to one object marker \eqref{ex:vdwal:3.32}, which means φ on T and v, but
 not on Appl.
 
@@ -985,14 +983,14 @@ not on Appl.
 the relative construction in \ili{Makhuwa} does not have a relative complementiser\is{complementizers} or
 relative \isi{agreement}. Instead, it is best analysed as a nomino-verbal participial
 construction which does not have an agreeing C head
-(\Citealt{vanderWal2010}).\footnote{What seems to be a subject marker or
+\citep{vanderWal2010}.\footnote{What seems to be a subject marker or
 relative marker on the relative verb in \ili{Makhuwa} (\emph{e-} and \emph{tsi-} in
 the examples) is a pronominal head (PtcpP) coreferring to the referent
 indicated by the head noun, e.g. both refer to a class 9 shirt and therefore
 are both in class 9. There is no regular subject marking, but the subject can
 be pronominalised on the verb as a possessive (-\emph{aawe}), showing that the
 relative clause is not a full clause but lacks higher heads in the extended
-verbal projection. See \Textcite{vanderWal2010} for details.}
+verbal projection. See \textcite{vanderWal2010} for details.}
 
 \ea \ili{Makhuwa} (P31, \citealt[210]{vanderWal2010})\\
     \gll Ki-m-phéélá  ekanetá  tsi-ki-vah-aly-ááwé  (Alí).\\
@@ -1309,7 +1307,7 @@ abilities/possibilities (Amani \citealt{Lusekelo2012} and p.c.):
 
 The first type of predicate never shows \isi{object marking} and thus never projects
 a v with uφ features\is{φ-features}. In the second and third type of predicate uφ features
-must/can be present on v. It is unclear, however, how type 1 can be
+must\slash can be present on v. It is unclear, however, how type 1 can be
 distinguished (featurally) from the other two types, or, in other words, how
 type 1 forms a natural subset. \isi{object marking} in \ili{Nyakyusa} therefore appears to
 be an instance of nanoparametric\is{parameters} variation: individual predicates have/do not
@@ -1400,7 +1398,7 @@ from macro to nano, fit the morphosyntactic variation in the \ili{Bantu} languag
 better than a simple \enquote{macro} or \enquote{micro}. Importantly, this perspective
 encourages us to look seriously at syntactic variation from a featural
 perspective. The featural perspective is attractive with the Minimalist
-Programme in mind, locating parametric variation\is{parameters} in the features (on functional
+programme in mind, locating parametric variation\is{parameters} in the features (on functional
 heads) in the lexicon. With the outlined parameter-setting algorithm motivated
 by third-factor principles (\citealt{Biberauer2017,Biberauer2017c};
 \citealt{BibRob2017}) we have a promising model accounting for
@@ -1442,14 +1440,12 @@ marked by a grave accent.
 
 \section*{Acknowledgements}
 
-This research was funded by the European Research Council Advanced Grant No.\
-269752 \enquote{Rethinking Comparative Syntax}. I am grateful to the members of
+This research was funded by the European Research Council advanced grant no.\
+269752 \enquote{Rethinking comparative syntax}. I am grateful to the members of
 the ReCoS team and especially Theresa Biberauer with whom this little project
 was started, and furthermore to the helpful comments of three anonymous
 reviewers.  Any errors and misrepresentations are mine only.
 
-{\sloppy
-\printbibliography[heading=subbibliography,notkeyword=this]
-}
+{\sloppy\printbibliography[heading=subbibliography,notkeyword=this]}
 
 \end{document}
