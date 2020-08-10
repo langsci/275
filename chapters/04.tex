@@ -32,7 +32,7 @@ answers that it arrives at. It has been a major focus of \gls{MGG}\footnote{I
     research most closely associated with Noam Chomsky} (fn.\ 1, p.\ 3). It refers
     to a variety of different but related approaches. Like
     \citeauthor{CulJac2005} I do not regard \enquote{mainstream} as a synonym for
-\enquote{correct}.} since the emergence of the Principles and Parameters framework in
+\enquote{correct}.} since the emergence of the principles and parameters framework in
 the early 80s, and it has been a central concern of Ian Roberts \parencite[see
 e.g.][]{Roberts1997,Roberts2007}. However, the questions that define the field
 of comparative syntax are of interest not just to \gls{MGG} but to any serious
@@ -55,8 +55,8 @@ third is an emphasis on the importance of developing concrete analyses which
 keep the acquisition\is{language acquisition} task as simple as possible. I will discuss all of these in
 the following pages.\is{HPSG|see{Head-Driven Phrase Structure Grammar}}
 
-The paper is organized as follows. In~\Cref{sec-5:2}, I look at the Principles
-and Parameters approach to comparative syntax and explain why proponents of
+The paper is organized as follows. In~\Cref{sec-5:2}, I look at the principles
+and parameters approach to comparative syntax and explain why proponents of
 \gls{HPSG} are sceptical about it. Then in \Cref{sec-5:3}, I explain the main
 components of \gls{HPSG}\is{Head-Driven Phrase Structure Grammar} grammars: types, features, and constraints. In
 \Cref{sec-5:4}, I discuss the ways in which \gls{HPSG}\is{Head-Driven Phrase Structure Grammar} grammars may differ, and
@@ -64,7 +64,7 @@ in \Cref{sec-5:5}, I pull together the main ideas about comparative syntax that
 I have introduced in the preceding sections. In \Cref{sec-5:conclusions} I
 conclude the paper.
 
-\section{Principles and parameters}\label{sec-5:2}
+\section{Principles and parameters}\label{sec-5:2}\largerpage
 
 For \gls{MGG}, the ways in which languages are alike and the ways in which they
 may differ are a reflection of an innate language faculty. The properties they
@@ -77,7 +77,7 @@ was hoped when they were first introduced in the early 1980s.\footnote{See
 
 Outsiders have always been sceptical about these ideas. Thus,
 \citet[31]{PolSag1994}, after considering the possibility of incorporating
-parameters into \gls{HPSG}\is{Head-Driven Phrase Structure Grammar}, comment as
+parameters into\linebreak \gls{HPSG}\is{Head-Driven Phrase Structure Grammar}, comment as
 follows:
 
 \blockquote{In the absence of a list, however tentative, of posited
@@ -250,15 +250,14 @@ There are many other kinds of type. For example, there are types that are the
 value of fairly traditional features like \textsc{person}, \textsc{number}, \textsc{gender}, and \textsc{case}. A
 simple treatment of person might have the types \emph{first},
 \emph{second}, and \emph{third}, and a simple treatment of number the types
-\emph{sing}(\emph{ular}) and \emph{plur}(\emph{al}).\footnote{
-\textrm{In practice a more complex system of values may well be appropriate.}}
+\emph{sing}(\emph{ular}) and \emph{plur}(\emph{al}).\footnote{In practice a more complex system of values may well be appropriate.}
 Unlike the types mentioned above, these are atomic types with no features.
 There are also types that provide the value of various less familiar features.
 For example, \gls{HPSG}\is{Head-Driven Phrase Structure Grammar} has a feature \textsc{head}, whose value is a \emph{part-of-speech},
 a type which indicates the part of speech of a sign and provides appropriate
 information, e.g. information about person, number, gender, and case in the
 case of nominal signs or finiteness in the case of verbal signs. Two other
-important features are \textsc{subj(ect)} and \textsc{comp(lement)s}, whose value is a list of
+important features are \textsc{subj(ect)} and \textsc{comp(le\-ment)s}, whose value is a list of
 \emph{synsem} objects, combinations of syntactic and semantic information.
 The former, mentioned earlier, indicates what kind of subject a sign requires
 and the latter indicates what complements it takes. Obviously, there are plenty
@@ -299,7 +298,7 @@ with argument selection information. Here is a simple illustration based on
     \end{tikzpicture}
 \z
 %
-Upper case letters are used for the two dimensions of classification, and \emph{v-lx}, \emph{intr-lx}, \emph{s-rsg-lx}, and \emph{srv-lx} abbreviate \emph{verb-lexeme}, \emph{intransitive-lexeme}, \emph{subject-raising-lexeme}, and \emph{subject-raising-verb-lexeme}, respectively. All these types will be subject to specific constraints. For example, \emph{v-lx} will be subject to something like the following constraint:
+Small capitals are used for the two dimensions of classification, and \emph{v-lx}, \emph{intr-lx}, \emph{s-rsg-lx}, and \emph{srv-lx} abbreviate \emph{verb-lexeme}, \emph{intransitive-lexeme}, \emph{subject-raising-lexeme}, and \emph{subject-raising-verb-lexeme}, respectively. All these types will be subject to specific constraints. For example, \emph{v-lx} will be subject to something like the following constraint:
 
 \ea\label{ex:borsley:4.3}
     \emph{v-lx} → \avm[style=narrow]{
@@ -366,7 +365,7 @@ illustration:
     \end{tikzpicture}
 \z
 %
-\emph{head-fill-ph}, \emph{interr-cl}, and \emph{wh-interr-cl} are
+\emph{Head-fill-ph}, \emph{interr-cl}, and \emph{wh-interr-cl} are
 abbreviations for \emph{head-filler-phrase}, \emph{interrogative-clause}, and
 \emph{wh-interrogative-clause}, respectively. Other subtypes of
 \emph{headed-phrase}  are \emph{head-complement-phrase} (for combinations of a
@@ -471,7 +470,7 @@ One of these heads has the following description:
                   content & [ index & \1 \\ restr & \{\5 $\cup$ \3\}] ]\\
         \punk{nonlocal|to-bind|slash}{\{\4\}} ]
     }
-\z
+\z\largerpage
 %
 This interacts with certain phrase types to give a structure like
 \REF{ex:borsley:4.7}. It is complex, but each component of it has a purpose. The \textsc{mod}
@@ -535,12 +534,12 @@ The bracketed material in \REF{ex:borsley:4.9} is a \emph{wh}-relative,
 often been called a comparative correlative, a construction whose component
 clauses have been called \emph{the}{}-clauses, e.g. in \citet{Borsley2011}. We
 have three types of head-filler phrases each with various distinctive
-properties. \emph{wh}-relatives may contain \emph{who} and \emph{which} but not
-\emph{what}. \emph{wh}-exclamatives may only contain \emph{what}
+properties. \emph{Wh}-relatives may contain \emph{who} and \emph{which} but not
+\emph{what}. \emph{Wh}-exclamatives may only contain \emph{what}
 \emph{a}(\emph{n}) or \emph{how}. Neither allows an auxiliary\is{auxiliaries} before the
 subject. Finally, \emph{the}{}-clauses must contain \emph{the} and a
 comparative word. The second clause but not the first may contain a pre-subject
-auxiliary:
+auxiliary:\largerpage
 
 \ea\label{ex:borsley:4.12}
     \ea[]{The more I read, the more do I understand.}
@@ -562,7 +561,7 @@ an empty element. For \gls{HPSG}\is{Head-Driven Phrase Structure Grammar}, as
 indicated earlier, \isi{relative clauses} have a feature \textsc{mod}, whose value
 indicates what type of nominal phrase they modify. In a \emph{wh}-relative
 clause, the value of \textsc{mod} is coindexed with the relative pronoun, as in
-\REF{ex:borsley:4.13}:
+\REF{ex:borsley:4.13}:\largerpage[2]
 
 \ea\label{ex:borsley:4.13}
     \begin{tikzpicture}[baseline,yshift=.75\baselineskip]
@@ -622,7 +621,7 @@ assume an abstract notion of \textsc{case} present in languages whether or not t
 morphological case, but this complicates the acquisition\is{language acquisition} task and necessitates
 more complex innate machinery than would otherwise be needed. It is probably
 not a position that would find favour outside MGG.\footnote{An abstract notion
-of case (or Case) played an important role in the Government and Binding
+of case (or Case) played an important role in the government and binding
 framework, but it seems to be of little importance within Minimalism and it has
 not been adopted outside \gls{MGG}.}
 
@@ -668,7 +667,7 @@ automatic consequence of the fact, highlighted earlier, that all the real work
 is done by lexical entries within Minimalism. This is not the case within
 \gls{HPSG} given the important role of the system of phrasal types and
 associated constraints. However, for \gls{HPSG}\is{Head-Driven Phrase Structure Grammar}, many differences between
-languages are a lexical matter.\largerpage[1]
+languages are a lexical matter.
 
 Most obviously, the same meaning will generally be associated with different
 phonological properties in different languages. \ili{English} has \emph{dog} where
@@ -1095,7 +1094,7 @@ at least it seems to most people within \gls{HPSG}.\largerpage
 Another feature of \gls{HPSG}\is{Head-Driven Phrase Structure Grammar}, alluded to above, which is very relevant in the
 present context is the emphasis on the importance of firm empirical foundations
 in the form of detailed formal analyses of the kind advocated by
-\citeauthor{Chomsky1957} in \emph{Syntactic Structures}. Whereas \gls{MGG}
+\citeauthor{Chomsky1957} in \emph{Syntactic structures}. Whereas \gls{MGG}
 typically offers sketches of analyses which might be fleshed out one day,
 \gls{HPSG} commonly provides detailed analyses which can be set out in an
 appendix. As noted above, \citet{GinSag2000}, which sets out its analysis of
@@ -1220,7 +1219,7 @@ language.
 I have argued in the preceding pages that \gls{HPSG}\is{Head-Driven Phrase Structure Grammar} is a framework that can
 make a major contribution to the comparative syntax. It has a number of
 features that are important here. The first is its emphasis on detailed formal
-analyses of the kind envisaged in \emph{Syntactic Structures}, often
+analyses of the kind envisaged in \emph{Syntactic structures}, often
 incorporated into a computer implementation. This means that the framework
 provides firmer foundations than some other approaches for claims about
 individual languages and ultimately about language in general. Secondly, it is
