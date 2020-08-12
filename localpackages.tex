@@ -128,3 +128,6 @@
 % Use the original definition from verse.sty
 \renewcommand*{\theHpoemline}{\arabic{verse@envctr}.\arabic{poemline}}
 \makeatother
+
+% automatic "," in numbers when used with \num{...}
+\usepackage[group-minimum-digits=4, group-separator={,}]{siunitx}
