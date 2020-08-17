@@ -53,7 +53,7 @@ feature (see further in \Cref{sub:3.2.1}):
                     {No: head-initial}
                     [.{Yes: present on all heads?}
                         {Yes: head-final}
-                        [.{No: present on [+V] heads?}
+                        [.{No: present on [$+$V] heads?}
                             {Yes: head-final\\in the clause only}
                             {No: present on \dots}
                         ]
@@ -128,7 +128,7 @@ ever more specified (i.e. featurally rich) \isi{parameters}. In “size” terms
     feature F:
     \ea Macroparameters: all heads of the relevant type, e.g. all probes, all
     phase\is{phases} heads, share \emph{v\textsubscript{i}};
-    \ex Mesoparameters: all heads of a given natural class, e.g. [+V] or a core
+    \ex Mesoparameters: all heads of a given natural class, e.g. [$+$V] or a core
     functional category, share \emph{v\textsubscript{i}};
     \ex Microparameters: a small, lexically definable subclass of functional
     heads (e.g. modal auxiliaries, subject clitics) share
@@ -839,11 +839,11 @@ sequence.
 
         \Tree 	[.{Is uφ present?}
                     {N}
-                    [.\node(all){Y:}; %: Is uφ present on all heads?}
+                    [.\node(all){Y:};
                         {Y}
-                        [.\node(nom){N:}; %: Is uφ present on all nominal [+N]/clausal [+V] heads?}
+                        [.\node(nom){N:};
                             {Y}
-                            [.\node(x){N:}; %: Is uφ present on heads with additional feature X?}
+                            [.\node(x){N:};
                                 {Y}
                                 {\dots}
                             ]
@@ -853,7 +853,7 @@ sequence.
 
         \node [right=1.5mm of all.center] {Is uφ present on all heads?};
         \node [right=1.5mm of nom.center, align=left] {Is uφ present on all nominal
-            [+N]/\\ clausal [+V] heads?};
+            [$+$N]/\\ clausal [$+$V] heads?};
         \node [right=1.5mm of x.center] {Is uφ present on heads with additional feature
             X?};
 
@@ -894,8 +894,8 @@ One step further down the hierarchy we ask whether uφ is present on a subset of
 heads, specifically all heads in the nominal or verbal domain. Since it may be
 the case that there is a relevant subset in \emph{both} domains, we can see
 this as a split in a third dimension where \isi{parameters} are set for the nominal
-domain [+N] separately from the verbal domain [+V], depending on the input.
-Focussing on the clausal domain for the current discussion, once the [+V]
+domain [$+$N] separately from the verbal domain [$+$V], depending on the input.
+Focussing on the clausal domain for the current discussion, once the [$+$V]
 subset is identified, by \gls{IG} it is assumed that all heads in the subset, i.e.
 all functional heads\is{functional items} in the extended verbal projection, have uφ.
 
@@ -1072,7 +1072,7 @@ discussed so far would thus come out as follows:\largerpage
         \node [right=1.5mm of all.center] {Is uφ present on all heads?};
         \node [right=1.5mm of nom.center, align=left] {Is uφ present on all nominal/clausal heads?};
         \node [right=1.5mm of x.center, align=left] {Is uφ present on all\\argument-licensing heads?};
-        \node [right=1.5mm of ph.center, align=left] {Is uφ present on\\higher phase\is{phases} (v+T)?};
+        \node [right=1.5mm of ph.center, align=left] {Is uφ present on\\higher phase\is{phases} (v$+$T)?};
 
     \end{tikzpicture}
 \z
@@ -1212,7 +1212,7 @@ hierarchy:%\newpage
         \node [right=1.5mm of all.center] {Is uφ present on all heads?};
         \node [right=1.5mm of nom.center, align=left] {Is uφ present on all nominal/clausal heads?};
         \node [right=1.5mm of x.center, align=left] {Is uφ present on all\\argument-licensing heads?};
-        \node [right=1.5mm of ph.center, align=left] {Is uφ present on\\higher phase\is{phases} (v+T)?};
+        \node [right=1.5mm of ph.center, align=left] {Is uφ present on\\higher phase\is{phases} (v$+$T)?};
 
     %\end{tikzpicture}
     %\begin{tikzpicture}[baseline=-.79\baselineskip]
